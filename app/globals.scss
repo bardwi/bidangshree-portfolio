@@ -1,49 +1,68 @@
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --paper: #f6efe3;
+  --paper-2: #fcf8f0;
+  --card: #fffdf9;
+  --ink: #1c1712;
+  --ink-soft: #6a5f52;
+  --ink-faint: #9a8e7e;
+  --line: #e5dac8;
+  --line-strong: #d5c7b0;
+  --saffron: #d7872a;
+  --saffron-deep: #a85f12;
+  --saffron-tint: #f4e4cc;
+  --espresso: #231c15;
+  --espresso-2: #2e251b;
+  --maxw: 1180px;
+  --nav-h: 74px;
+  --serif: var(--font-fraunces), Georgia, serif;
+  --sans:
+    var(--font-jakarta), -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    sans-serif;
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-html {
-  height: 100%;
-}
-
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
-
-body {
-  min-height: 100%;
-  display: flex;
-  flex-direction: column;
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
 * {
-  box-sizing: border-box;
-  padding: 0;
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: var(--sans);
+  background: var(--paper);
+  color: var(--ink);
+  line-height: 1.62;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
+}
 a {
   color: inherit;
   text-decoration: none;
 }
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+img {
+  max-width: 100%;
+  display: block;
+}
+.wrap {
+  width: 100%;
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 28px;
+}
+section {
+  scroll-margin-top: var(--nav-h);
+}
+.serif {
+  font-family: var(--serif);
+}
+.accent {
+  color: var(--saffron-deep);
+}
+.eyebrow {
+  font-size: 0.74rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--saffron-deep);
 }

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { fraunces, jakarta } from './fonts';
+import Header from '@/components/layout/Header/Header';
 import './globals.scss';
 
 export const metadata: Metadata = {
@@ -21,7 +22,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${fraunces.variable} ${jakarta.variable}`}>
-      <body>{children}</body>
+      <body>
+        <Header />
+        {children}
+      </body>
     </html>
   );
 }

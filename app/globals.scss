@@ -1,17 +1,19 @@
 :root {
-  --paper: #f6efe3;
-  --paper-2: #fcf8f0;
-  --card: #fffdf9;
-  --ink: #1c1712;
-  --ink-soft: #6a5f52;
-  --ink-faint: #9a8e7e;
-  --line: #e5dac8;
-  --line-strong: #d5c7b0;
-  --saffron: #d7872a;
-  --saffron-deep: #a85f12;
-  --saffron-tint: #f4e4cc;
-  --espresso: #231c15;
-  --espresso-2: #2e251b;
+  --paper: #faf7f2;
+  --paper-2: #fffdf9;
+  --card: #ffffff;
+  --ink: #151515;
+  --ink-soft: #55514a;
+  --ink-faint: #8b8174;
+  --line: #e8ded2;
+  --line-strong: #d6c8ba;
+  --saffron: #315c54;
+  --saffron-deep: #23463f;
+  --saffron-tint: #e3eee9;
+  --gold: #c8873d;
+  --gold-tint: #f3e3ce;
+  --espresso: #1f2a27;
+  --espresso-2: #2b3a35;
   --maxw: 1180px;
   --nav-h: 74px;
   --serif: var(--font-fraunces), Georgia, serif;
@@ -65,4 +67,212 @@ section {
   letter-spacing: 0.22em;
   text-transform: uppercase;
   color: var(--saffron-deep);
+}
+
+/* ---------- NAV ---------- */
+
+header.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--nav-h);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  background: rgba(250, 247, 242, 0);
+  border-bottom: 1px solid transparent;
+  transition:
+    background 0.3s,
+    border-color 0.3s,
+    box-shadow 0.3s;
+}
+
+header.nav.scrolled {
+  background: rgba(250, 247, 242, 0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--line);
+  box-shadow: 0 6px 24px rgba(15, 23, 42, 0.05);
+}
+
+.nav-in {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.logo {
+  font-family: var(--serif);
+  font-size: 1.45rem;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  text-decoration: none;
+  color: var(--ink);
+}
+
+.logo b {
+  color: var(--saffron-deep);
+  font-weight: 600;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+  list-style: none;
+}
+
+.nav-links a {
+  position: relative;
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: var(--ink-soft);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 1.5px;
+  background: var(--saffron);
+  transition: width 0.25s;
+}
+
+.nav-links a:hover {
+  color: var(--ink);
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.pill {
+  background: var(--ink);
+  color: var(--paper-2) !important;
+  padding: 11px 22px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition:
+    transform 0.18s,
+    background 0.2s;
+}
+
+.pill:hover {
+  transform: translateY(-2px);
+  background: var(--saffron-deep);
+}
+
+.pill::after {
+  display: none;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.lang-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px;
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  background: rgba(255, 253, 249, 0.82);
+  box-shadow: 0 8px 22px rgba(15, 23, 42, 0.05);
+}
+
+.lang-switch a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 42px;
+  height: 32px;
+  padding: 0 12px;
+  border-radius: 999px;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  text-decoration: none;
+  transition:
+    background 0.2s,
+    color 0.2s,
+    transform 0.18s;
+}
+
+.lang-switch a.active {
+  background: var(--ink);
+  color: var(--paper-2);
+}
+
+.lang-switch a:not(.active):hover {
+  background: var(--saffron-tint);
+  color: var(--saffron-deep);
+  transform: translateY(-1px);
+}
+
+.lang-switch .sep {
+  width: 1px;
+  height: 16px;
+  background: var(--line-strong);
+  opacity: 0.8;
+}
+
+.menu-btn {
+  display: none;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  color: var(--ink);
+  font-size: 1.5rem;
+}
+.logo-img {
+  height: 38px;
+  width: auto;
+  display: block;
+}
+
+/* ---------- MOBILE NAV ---------- */
+
+@media (max-width: 920px) {
+  .nav-menu {
+    display: none;
+    position: absolute;
+    top: var(--nav-h);
+    left: 0;
+    right: 0;
+    background: rgba(250, 247, 242, 0.96);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--line);
+    padding: 18px 28px 24px;
+  }
+
+  .nav-menu.open {
+    display: block;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+
+  .lang-switch a {
+    min-width: 36px;
+    height: 30px;
+    padding: 0 9px;
+  }
 }

@@ -9,7 +9,7 @@ export default function Hero() {
       <div className={`wrap ${styles.heroGrid}`}>
         <div className={styles.heroText}>
           <span className={`eyebrow ${styles.rise}`}>
-            Bidangshree Brahma — Berlin
+            Bidangshree Brahma - Berlin
           </span>
 
           <h1 className={styles.rise}>
@@ -43,7 +43,7 @@ export default function Hero() {
           <div className={`${styles.heroFeature} ${styles.rise}`}>
             <span className={styles.dot} aria-hidden="true" />
             <span>
-              <b>Featured UX case study:</b> LinguaHub — turning a real learning
+              <b>Featured UX case study:</b> LinguaHub - turning a real learning
               problem into a focused MVP and clickable prototype.
             </span>
           </div>

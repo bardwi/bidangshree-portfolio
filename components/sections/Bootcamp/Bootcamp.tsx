@@ -19,10 +19,10 @@ export default function Bootcamp() {
 
             <p>
               An intensive 636-unit Product Management and Product Owner
-              training at Digitale Leute School, Apr–Jul 2026 - covering
-              discovery, strategy, UX design, agile delivery, stakeholder
-              management, and product analytics. I use LinguaHub as my
-              UX-focused portfolio case study throughout.
+              training at Digitale Leute School - covering discovery, strategy,
+              UX design, agile delivery, stakeholder management, and product
+              analytics. I use LinguaHub as my UX-focused portfolio case study
+              throughout.
             </p>
           </div>
 
@@ -35,11 +35,6 @@ export default function Bootcamp() {
             <div className={styles.fact}>
               <div className={styles.factNumber}>636</div>
               <div className={styles.factLabel}>teaching units</div>
-            </div>
-
-            <div className={styles.fact}>
-              <div className={styles.factNumber}>AI</div>
-              <div className={styles.factLabel}>integrated throughout</div>
             </div>
           </div>
         </div>
@@ -59,11 +54,6 @@ export default function Bootcamp() {
             </div>
           ))}
         </div>
-
-        <p className={`${styles.bootExtra} ${styles.rise}`}>
-          <b>Additional training:</b> BSK B2 German at GFBM Berlin, Feb–Jul 2025
-          · C1 German course at die deutSCHule, Apr–Jul 2026.
-        </p>
       </div>
     </section>
   );

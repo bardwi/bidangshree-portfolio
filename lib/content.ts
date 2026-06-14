@@ -13,9 +13,11 @@ export const experience: Experience[] = [
     company: 'TIME for Kids',
     tag: 'Frontend Software Developer',
     bullets: [
-      'Built and improved digital education products with React and TypeScript, with focus on clear user-facing flows and usable interfaces.',
-      'Translated stakeholder needs into build-ready requirements, user stories, and frontend delivery decisions.',
-      'Collaborated with design, backend, QA, and stakeholders in agile delivery, sprint reviews, and backlog refinement.',
+      'Combined frontend development with product ownership tasks for internal education-sector applications.',
+      'Translated stakeholder needs into user stories, priorities, and clear development requirements.',
+      'Built React/TypeScript features, reusable components, responsive layouts, and REST API integrations.',
+      'Collaborated with product, design, backend, and QA teams to improve workflows, usability, and release quality.',
+      'Contributed to sprint planning, backlog refinement, documentation, testing, and cross-browser validation.',
     ],
   },
   {

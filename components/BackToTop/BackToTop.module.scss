@@ -1,0 +1,62 @@
+.button {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 900;
+
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: 1px solid var(--line-strong);
+  background: var(--card);
+  color: var(--ink);
+  cursor: pointer;
+
+  display: grid;
+  place-items: center;
+
+  box-shadow: 0 10px 26px rgba(31, 42, 39, 0.18);
+
+  opacity: 0;
+  transform: translateY(12px);
+  pointer-events: none;
+
+  transition:
+    opacity 0.25s,
+    transform 0.25s,
+    background 0.2s,
+    color 0.2s,
+    border-color 0.2s;
+
+  svg {
+    width: 19px;
+    height: 19px;
+    stroke-width: 2.2;
+  }
+
+  &:hover {
+    background: var(--saffron);
+    color: #fff;
+    border-color: var(--saffron);
+    transform: translateY(-2px);
+  }
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+
+  &:hover {
+    transform: translateY(-2px);
+  }
+}
+
+@media (max-width: 640px) {
+  .button {
+    right: 18px;
+    bottom: 18px;
+    width: 42px;
+    height: 42px;
+  }
+}

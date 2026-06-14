@@ -2,7 +2,9 @@ import type { Metadata } from 'next';
 import { fraunces, jakarta } from './fonts';
 import Header from '@/components/layout/Header/Header';
 import Footer from '@/components/layout/Footer/Footer';
+import CookieConsentBanner from '@/components/CookieConsentBanner/CookieConsentBanner';
 import './globals.scss';
+import BackToTop from '@/components/BackToTop/BackToTop';
 
 export const metadata: Metadata = {
   title: 'Bidangshree Brahma — Product Manager/ Product Owner',
@@ -27,6 +29,8 @@ export default function RootLayout({
         <Header />
         {children}
         <Footer />
+        <BackToTop />
+        <CookieConsentBanner />
       </body>
     </html>
   );

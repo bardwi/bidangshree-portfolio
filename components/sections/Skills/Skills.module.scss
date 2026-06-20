@@ -1,14 +1,14 @@
 .secHead {
   max-width: 680px;
-  margin-bottom: 56px;
+  margin-bottom: 48px;
 
   h2 {
     font-family: var(--serif);
     font-weight: 400;
-    font-size: clamp(1.9rem, 4vw, 2.9rem);
-    line-height: 1.1;
-    letter-spacing: -0.015em;
-    margin-top: 14px;
+    font-size: clamp(1.65rem, 3vw, 2.25rem);
+    line-height: 1.16;
+    letter-spacing: -0.01em;
+    margin-top: 12px;
   }
 }
 
@@ -21,8 +21,8 @@
 .skillGroup {
   background: var(--card);
   border: 1px solid var(--line);
-  border-radius: 18px;
-  padding: 28px;
+  border-radius: 16px;
+  padding: 24px;
   transition:
     transform 0.2s,
     border-color 0.2s,
@@ -35,12 +35,12 @@
   }
 
   h3 {
-    font-size: 0.78rem;
+    font-size: 0.72rem;
     font-weight: 700;
-    letter-spacing: 0.16em;
+    letter-spacing: 0.15em;
     text-transform: uppercase;
     color: var(--saffron-deep);
-    margin-bottom: 18px;
+    margin-bottom: 16px;
   }
 }
 
@@ -69,28 +69,29 @@
   background: var(--paper-2);
   border: 1px solid var(--line);
   border-radius: 8px;
-  padding: 7px 13px;
-  font-size: 0.88rem;
+  padding: 6px 11px;
+  line-height: 1.35;
+  font-size: 0.8rem;
   font-weight: 500;
   color: var(--ink-soft);
 }
 
 .langs {
-  margin-top: 28px;
+  margin-top: 26px;
   background: var(--card);
   border: 1px solid var(--line);
-  border-radius: 18px;
-  padding: 24px 30px;
+  border-radius: 16px;
+  padding: 22px 26px;
   display: flex;
   align-items: center;
-  gap: 36px;
+  gap: 32px;
   flex-wrap: wrap;
 }
 
 .langsTitle {
-  font-size: 0.78rem;
+  font-size: 0.72rem;
   font-weight: 700;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.15em;
   text-transform: uppercase;
   color: var(--saffron-deep);
 }
@@ -109,11 +110,11 @@
 
 .langName {
   font-family: var(--serif);
-  font-size: 1.2rem;
+  font-size: 1.05rem;
 }
 
 .langLevel {
-  font-size: 0.86rem;
+  font-size: 0.8rem;
   color: var(--ink-soft);
 }
 

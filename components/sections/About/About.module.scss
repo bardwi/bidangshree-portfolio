@@ -5,10 +5,10 @@
   h2 {
     font-family: var(--serif);
     font-weight: 400;
-    font-size: clamp(1.9rem, 4vw, 2.9rem);
-    line-height: 1.1;
-    letter-spacing: -0.015em;
-    margin-top: 14px;
+    font-size: clamp(1.65rem, 3vw, 2.25rem);
+    line-height: 1.16;
+    letter-spacing: -0.01em;
+    margin-top: 12px;
   }
 
   p {
@@ -25,9 +25,9 @@
   align-items: start;
 
   p {
-    font-size: 1.12rem;
+    font-size: 1rem;
     color: var(--ink-soft);
-    margin-bottom: 18px;
+    margin-bottom: 16px;
 
     b {
       color: var(--ink);
@@ -45,7 +45,7 @@
   background: var(--card);
   border: 1px solid var(--line);
   border-radius: 16px;
-  padding: 22px 24px;
+  padding: 20px 22px;
   transition:
     transform 0.2s,
     border-color 0.2s,
@@ -60,15 +60,16 @@
   h4 {
     font-family: var(--serif);
     font-weight: 500;
-    font-size: 1.15rem;
+    font-size: 1rem;
+    line-height: 1.35;
     display: flex;
     align-items: center;
     gap: 12px;
   }
 
   p {
-    margin: 12px 0 0;
-    font-size: 0.96rem;
+    margin: 10px 0 0;
+    font-size: 0.92rem;
     color: var(--ink-soft);
   }
 }

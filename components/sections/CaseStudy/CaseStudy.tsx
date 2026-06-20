@@ -10,7 +10,7 @@ export default function CaseStudy() {
           <span className="eyebrow">Featured Case Study</span>
 
           <h2>
-            Designing a user experience from a real problem — not just a feature
+            Designing a user experience from a real problem - not just a feature
             list.
           </h2>
         </div>
@@ -27,7 +27,7 @@ export default function CaseStudy() {
 
             <p className={styles.sub}>
               A central class material hub for adult German learners and
-              teachers — designed around one UX goal: helping learners find
+              teachers - designed around one UX goal: helping learners find
               lessons, homework, and course materials in one organized place.
             </p>
 
@@ -68,7 +68,10 @@ export default function CaseStudy() {
             </div>
 
             <div className={styles.caseLinks}>
-              <Link href="/work/linguahub" className={styles.primaryLink}>
+              <Link
+                href="/case-studies/linguahub"
+                className={styles.primaryLink}
+              >
                 <FiFileText aria-hidden="true" />
                 Read full case study
               </Link>

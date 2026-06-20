@@ -1,50 +1,51 @@
 .secHead {
   max-width: 680px;
-  margin-bottom: 56px;
+  margin-bottom: 48px;
 
   h2 {
     font-family: var(--serif);
     font-weight: 400;
-    font-size: clamp(1.9rem, 4vw, 2.9rem);
-    line-height: 1.1;
-    letter-spacing: -0.015em;
-    margin-top: 14px;
+    font-size: clamp(1.65rem, 3vw, 2.25rem);
+    line-height: 1.16;
+    letter-spacing: -0.01em;
+    margin-top: 12px;
   }
 }
 
 .contactGrid {
   display: grid;
   grid-template-columns: 0.85fr 1.15fr;
-  gap: 56px;
+  gap: 54px;
   align-items: start;
 }
 
 .contactIntro {
   p {
     color: var(--ink-soft);
-    font-size: 1.06rem;
+    font-size: 0.98rem;
+    line-height: 1.7;
     max-width: 380px;
   }
 }
 
 .logo {
-  margin-bottom: 18px;
+  margin-bottom: 16px;
 }
 
 .logoImg {
-  height: 58px;
+  height: 34px;
   width: auto;
   display: block;
 }
 
 .socials {
   display: flex;
-  gap: 12px;
-  margin-top: 30px;
+  gap: 10px;
+  margin-top: 26px;
 
   a {
-    width: 42px;
-    height: 42px;
+    width: 38px;
+    height: 38px;
     border: 1px solid var(--line-strong);
     border-radius: 50%;
     display: grid;
@@ -55,7 +56,6 @@
       color 0.2s,
       border-color 0.2s,
       transform 0.2s;
-
     &:hover {
       background: var(--ink);
       color: var(--paper-2);
@@ -65,15 +65,15 @@
   }
 
   svg {
-    width: 18px;
-    height: 18px;
+    width: 16px;
+    height: 16px;
   }
 }
 
 .form {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 16px;
+  gap: 15px;
 }
 
 .field {
@@ -82,7 +82,7 @@
   gap: 7px;
 
   label {
-    font-size: 0.82rem;
+    font-size: 0.76rem;
     font-weight: 600;
     color: var(--ink-soft);
   }
@@ -91,10 +91,10 @@
   textarea {
     background: var(--card);
     border: 1px solid var(--line-strong);
-    border-radius: 11px;
-    padding: 13px 15px;
+    border-radius: 10px;
+    padding: 11px 13px;
     color: var(--ink);
-    font-size: 1rem;
+    font-size: 0.92rem;
     font-family: inherit;
     transition:
       border-color 0.2s,
@@ -109,7 +109,7 @@
 
   textarea {
     resize: vertical;
-    min-height: 130px;
+    min-height: 120px;
   }
 }
 
@@ -126,10 +126,10 @@
   background: var(--ink);
   color: var(--paper-2);
   border: 0;
-  padding: 15px;
-  border-radius: 11px;
+  padding: 13px;
+  border-radius: 10px;
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 0.92rem;
   cursor: pointer;
   transition:
     background 0.2s,
@@ -161,16 +161,28 @@
 @media (max-width: 860px) {
   .contactGrid {
     grid-template-columns: 1fr;
-    gap: 38px;
+    gap: 36px;
   }
 }
 
 @media (max-width: 640px) {
   .secHead {
-    margin-bottom: 38px;
+    margin-bottom: 34px;
   }
 
   .form {
     grid-template-columns: 1fr;
+  }
+  .contactIntro {
+    p {
+      font-size: 0.95rem;
+    }
+  }
+
+  .field {
+    input,
+    textarea {
+      font-size: 0.9rem;
+    }
   }
 }

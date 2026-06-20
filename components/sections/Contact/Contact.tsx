@@ -58,7 +58,9 @@ ${form.ms}`,
       <div className="wrap">
         <div className={`${styles.secHead} ${styles.rise}`}>
           <span className="eyebrow">Contact</span>
-          <h2>Hiring for a UX-minded PM/PO? Let&apos;s talk.</h2>
+          <h2>
+            Let&apos;s talk about product, UX, and meaningful digital work.
+          </h2>
         </div>
 
         <div className={styles.contactGrid}>
@@ -74,9 +76,9 @@ ${form.ms}`,
             </div>
 
             <p>
-              Product Owner / Product Manager in Berlin who pairs UX judgment
-              with a builder&apos;s background. If you&apos;re making something
-              users actually need, I&apos;d love to hear about it.
+              Product Owner / Product Manager in Berlin with frontend
+              engineering and UX experience. I like working on digital products
+              that are useful, clear, and built around real user needs.
             </p>
 
             <Socials className={styles.socials} />

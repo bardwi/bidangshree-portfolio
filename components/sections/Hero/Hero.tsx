@@ -26,7 +26,7 @@ export default function Hero() {
 
           <div className={`${styles.heroCta} ${styles.rise}`}>
             <Link
-              href="#linguahub"
+              href="/case-studies/linguahub"
               className={`${styles.btn} ${styles.btnSolid}`}
             >
               View LinguaHub case study
@@ -43,8 +43,8 @@ export default function Hero() {
           <div className={`${styles.heroFeature} ${styles.rise}`}>
             <span className={styles.dot} aria-hidden="true" />
             <span>
-              <b>Featured UX case study:</b> LinguaHub - turning a real learning
-              problem into a focused MVP and clickable prototype.
+              <b>Featured case study:</b> LinguaHub - from user research to MVP
+              prototype.
             </span>
           </div>
 

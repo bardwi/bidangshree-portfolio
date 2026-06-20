@@ -54,25 +54,26 @@ export default function Experience() {
           <div className={styles.additionalTraining}>
             <h4>Additional training</h4>
 
-            <div className={styles.trainingRows}>
-              <div className={styles.trainingRow}>
-                <div className={styles.trainingMeta}>
-                  <span>Feb–Jul 2025</span>
-                </div>
-                <div className={styles.trainingBody}>
-                  <strong>BSK B2 German</strong>
-                  <p>GFBM Berlin</p>
-                </div>
+            <div className={styles.trainingGrid}>
+              <div className={styles.trainingCard}>
+                <span>Feb–Jul 2025</span>
+                <strong>BSK B2 German</strong>
+                <p>GFBM Berlin</p>
               </div>
 
-              <div className={styles.trainingRow}>
-                <div className={styles.trainingMeta}>
-                  <span>Apr–Jul 2026</span>
-                </div>
-                <div className={styles.trainingBody}>
-                  <strong>C1 German course</strong>
-                  <p>die deutSCHule</p>
-                </div>
+              <div className={styles.trainingCard}>
+                <span>Apr–Jul 2026</span>
+                <strong>C1 German course</strong>
+                <p>die deutSCHule</p>
+              </div>
+
+              <div className={styles.trainingCard}>
+                <span>Apr–Jul 2026</span>
+                <strong>Product Management &amp; Product Owner Training</strong>
+                <p>
+                  Digitale Leute School · Discovery, MVP scoping, agile
+                  delivery, stakeholder communication and product metrics
+                </p>
               </div>
             </div>
           </div>

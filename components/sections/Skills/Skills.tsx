@@ -7,7 +7,7 @@ export default function Skills() {
       <div className="wrap">
         <div className={`${styles.secHead} ${styles.rise}`}>
           <span className="eyebrow">Skills</span>
-          <h2>UX-focused product judgment, backed by real engineering.</h2>
+          <h2>Product work shaped by users, UX, and technical feasibility.</h2>
         </div>
 
         <div className={styles.skillGroups}>

@@ -1,4 +1,4 @@
-import { modules } from '@/lib/content';
+// import Link from 'next/link';
 import styles from './Bootcamp.module.scss';
 
 export default function Bootcamp() {
@@ -18,41 +18,47 @@ export default function Bootcamp() {
             </div>
 
             <p>
-              An intensive 636-unit Product Management and Product Owner
-              training at Digitale Leute School - covering discovery, strategy,
-              UX design, agile delivery, stakeholder management, and product
-              analytics. I use LinguaHub as my UX-focused portfolio case study
-              throughout.
+              Product Management and Product Owner training focused on product
+              discovery, UX strategy, MVP scoping, agile delivery, stakeholder
+              communication, and product metrics. I applied these methods
+              through LinguaHub, a UX-focused EdTech case study with research,
+              user flows, backlog structure, release planning, KPIs, and a
+              clickable prototype.
             </p>
+
+            {/* <Link
+              href="/case-studies/linguahub"
+              className={styles.trainingLink}
+            >
+              View applied case study
+            </Link> */}
           </div>
 
           <div className={styles.bootFacts}>
             <div className={styles.fact}>
-              <div className={styles.factNumber}>4</div>
-              <div className={styles.factLabel}>modules</div>
+              <div className={styles.factNumber}>Discovery</div>
+
+              <div className={styles.factLabel}>
+                user research &amp; problem framing
+              </div>
             </div>
 
             <div className={styles.fact}>
-              <div className={styles.factNumber}>636</div>
-              <div className={styles.factLabel}>teaching units</div>
-            </div>
-          </div>
-        </div>
+              <div className={styles.factNumber}>MVP</div>
 
-        <div className={`${styles.moduleGrid} ${styles.rise}`}>
-          {modules.map((module) => (
-            <div className={styles.module} key={module.num}>
-              <div className={styles.moduleNumber}>{module.num}</div>
-
-              <h4>{module.title}</h4>
-
-              <div className={styles.moduleTopics}>
-                {module.topics.map((topic) => (
-                  <span key={topic}>{topic}</span>
-                ))}
+              <div className={styles.factLabel}>
+                scope, backlog &amp; release planning
               </div>
             </div>
-          ))}
+
+            <div className={styles.fact}>
+              <div className={styles.factNumber}>Prototype</div>
+
+              <div className={styles.factLabel}>
+                flows, validation &amp; KPIs
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

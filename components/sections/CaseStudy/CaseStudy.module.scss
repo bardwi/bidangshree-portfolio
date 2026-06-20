@@ -4,15 +4,15 @@
 
 .secHead {
   max-width: 680px;
-  margin-bottom: 56px;
+  margin-bottom: 48px;
 
   h2 {
     font-family: var(--serif);
     font-weight: 400;
-    font-size: clamp(1.9rem, 4vw, 2.9rem);
-    line-height: 1.1;
-    letter-spacing: -0.015em;
-    margin-top: 14px;
+    font-size: clamp(1.65rem, 3vw, 2.25rem);
+    line-height: 1.16;
+    letter-spacing: -0.01em;
+    margin-top: 12px;
   }
 }
 
@@ -42,10 +42,10 @@
   h3 {
     font-family: var(--serif);
     font-weight: 400;
-    font-size: clamp(2rem, 4.5vw, 3.2rem);
-    line-height: 1.05;
-    margin: 22px 0 6px;
-    letter-spacing: -0.02em;
+    font-size: clamp(1.8rem, 3.6vw, 2.6rem);
+    line-height: 1.08;
+    margin: 20px 0 8px;
+    letter-spacing: -0.015em;
 
     em {
       font-style: italic;
@@ -57,7 +57,7 @@
 .caseIn {
   position: relative;
   z-index: 1;
-  padding: 54px 54px 48px;
+  padding: 46px 46px 42px;
 }
 
 .caseTag {
@@ -75,7 +75,7 @@
 }
 
 .sub {
-  font-size: 1.12rem;
+  font-size: 1rem;
   color: #d9cfc0;
   max-width: 620px;
 }
@@ -83,15 +83,15 @@
 .caseSnapshot {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 14px;
-  margin-top: 34px;
+  gap: 12px;
+  margin-top: 30px;
 }
 
 .snapshotCard {
   background: rgba(255, 255, 255, 0.055);
   border: 1px solid rgba(255, 255, 255, 0.16);
-  border-radius: 14px;
-  padding: 18px;
+  border-radius: 13px;
+  padding: 16px;
 }
 
 .snapshotLabel {
@@ -104,9 +104,9 @@
 }
 
 .snapshotText {
-  font-size: 0.9rem;
+  font-size: 0.86rem;
   color: #d9cfc0;
-  line-height: 1.45;
+  line-height: 1.5;
 }
 
 .caseLinks {
@@ -119,11 +119,11 @@
 .primaryLink {
   display: inline-flex;
   align-items: center;
-  gap: 9px;
-  padding: 12px 22px;
+  gap: 8px;
+  padding: 10px 18px;
   border-radius: 999px;
   font-weight: 600;
-  font-size: 0.92rem;
+  font-size: 0.88rem;
   background: var(--gold);
   color: #1f2a27;
   transition:
@@ -136,8 +136,8 @@
   }
 
   svg {
-    width: 16px;
-    height: 16px;
+    width: 15px;
+    height: 15px;
   }
 }
 
@@ -169,15 +169,18 @@
 
 @media (max-width: 640px) {
   .secHead {
-    margin-bottom: 38px;
+    margin-bottom: 34px;
   }
 
   .case {
-    border-radius: 22px;
+    border-radius: 20px;
+    h3 {
+      font-size: clamp(1.75rem, 9vw, 2.25rem);
+    }
   }
 
   .caseIn {
-    padding: 34px 22px 32px;
+    padding: 30px 20px 30px;
   }
 
   .caseSnapshot {
@@ -185,7 +188,8 @@
   }
 
   .sub {
-    font-size: 1rem;
+    font-size: 0.95rem;
+    line-height: 1.6;
   }
 
   .primaryLink {

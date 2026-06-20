@@ -9,8 +9,8 @@ export default function About() {
           <span className="eyebrow">About</span>
 
           <h2>
-            UX-focused product thinking, backed by a{' '}
-            <span className="accent">builder&apos;s background.</span>
+            Product decisions shaped by UX, users, and{' '}
+            <span className="accent">technical feasibility.</span>
           </h2>
         </div>
 
@@ -19,25 +19,25 @@ export default function About() {
             <p>
               I focus on the space where{' '}
               <b>user experience, product value, and technical feasibility</b>{' '}
-              meet. For seven years I built user-facing products as a frontend
-              engineer, and that experience shaped how I think about product:
-              clear flows, realistic scope, accessible interfaces, and
-              requirements developers can actually build.
+              meet. For seven years, I built user-facing products as a frontend
+              engineer. That experience shaped how I think about product: clear
+              flows, realistic scope, accessible interfaces, and requirements
+              teams can actually build.
             </p>
 
             <p>
               My product work starts with user needs: what are people trying to
-              do, where do they get stuck, what can we simplify? From there I
-              translate insights into MVP scope, prioritized backlogs, user
-              stories, acceptance criteria, and prototypes that make decisions
-              visible for teams and stakeholders.
+              do, where do they get stuck, and what can we simplify? From there,
+              I translate insights into MVP scope, prioritized backlogs, user
+              stories, acceptance criteria, and prototypes that help teams and
+              stakeholders make clearer decisions.
             </p>
 
             <p>
-              I&apos;m completing an intensive PM/PO bootcamp and built{' '}
-              <b>LinguaHub</b> end to end - from user journeys and UX structure
-              to MVP scoping, release planning, acceptance criteria, and a
-              clickable prototype - to prove the approach, not just describe it.
+              I am currently completing a PM/PO training and applying the
+              methods through <b>LinguaHub</b>, an end-to-end EdTech case study
+              covering user research, UX structure, MVP scoping, release
+              planning, KPIs, and a clickable prototype.
             </p>
           </div>
 

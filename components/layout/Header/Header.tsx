@@ -5,18 +5,21 @@ import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { FiMenu, FiX } from 'react-icons/fi';
 import styles from './Header.module.scss';
+import { usePathname } from 'next/navigation';
 
 const navItems = [
   { label: 'About', href: '/#about' },
-  { label: 'LinguaHub', href: '/#linguahub' },
+  { label: 'Case Study', href: '/#linguahub' },
   { label: 'Bootcamp', href: '/#bootcamp' },
   { label: 'Experience', href: '/#experience' },
   { label: 'Skills', href: '/#skills' },
 ];
 
 export default function Header() {
+  const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const isCaseStudyPage = pathname.startsWith('/case-studies');
 
   useEffect(() => {
     const handleScroll = () => {
@@ -30,6 +33,9 @@ export default function Header() {
   }, []);
 
   const closeMenu = () => setIsMenuOpen(false);
+  if (isCaseStudyPage) {
+    return null;
+  }
 
   return (
     <header className={`${styles.nav} ${isScrolled ? styles.scrolled : ''}`}>

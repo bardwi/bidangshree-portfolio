@@ -49,72 +49,24 @@ export const experience: Experience[] = [
   },
 ];
 
-export type Module = { num: string; title: string; topics: string[] };
-export const modules: Module[] = [
-  {
-    num: 'Module 1',
-    title: 'Strategy, Discovery & Vision',
-    topics: [
-      'Product Vision & Strategy',
-      'User Centricity',
-      'User Research & Interviews',
-      'Problem–Solution Fit',
-      'Business Modeling & PMF',
-      'Lean Product',
-      'OKRs',
-    ],
-  },
-  {
-    num: 'Module 2',
-    title: 'Product & UX Design',
-    topics: [
-      'UX/UI Design',
-      'Information Architecture',
-      'Wireframes',
-      'AI-driven Prototyping',
-      'User Tests & Experiments',
-    ],
-  },
-  {
-    num: 'Module 3',
-    title: 'Delivery & Stakeholder Management',
-    topics: [
-      'Agile & Scrum',
-      'Backlog & User Stories',
-      'Sprint Rituals',
-      'Roadmapping & Forecasting',
-      'Workflows & Releases',
-    ],
-  },
-  {
-    num: 'Module 4',
-    title: 'Analytics, Testing & Monitoring',
-    topics: [
-      'Product & Web Analytics',
-      'KPIs & Tracking',
-      'Software Testing',
-      'Bug Reporting',
-      'GA4 & Looker Studio',
-    ],
-  },
-];
-
 export const skills = {
   product: [
     'Product Discovery',
     'User Research',
     'UX Strategy',
     'Information Architecture',
-    'Story Mapping',
+    'Requirements Engineering',
     'Backlog & MoSCoW',
-    'User Stories',
+    'User Stories & Story Mapping',
     'Acceptance Criteria',
     'User Flows',
     'UX/UI Prototyping',
     'Roadmapping',
-    'Stakeholder Mgmt',
-    'Agile / Scrum',
-    'OKRs',
+    'Stakeholder Management',
+    'Scrum & Agile',
+    'Usability Testing',
+    'Wireframing & Flows',
+    'OKRs, KPIs & Metrics',
   ],
   engineering: [
     'React',
@@ -122,19 +74,27 @@ export const skills = {
     'TypeScript',
     'JavaScript',
     'HTML',
+    'Vite',
     'SCSS',
     'Tailwind',
     'REST APIs',
     'Git',
+    'npm',
+    'CI/CD',
+    'Jest & React Testing Library',
+    'BrowserStack / Cross-browser Testing',
+    'Design Systems',
   ],
   tools: [
-    'Figma',
+    'Figma & Prototyping',
     'Adobe XD',
-    'Jira',
+    'Adobe CC (PS/ID/AI)',
+    'Jira & Miro',
+    'No-code & LLMs',
     'Confluence',
-    'Miro',
     'Notion',
     'Lucidchart',
+    'Analytics Tools',
   ],
 };
 

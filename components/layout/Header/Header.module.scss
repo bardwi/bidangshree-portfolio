@@ -161,3 +161,45 @@
     display: grid;
   }
 }
+
+.navActions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.langBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  height: 42px;
+  padding: 0 16px;
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  background: rgba(255, 253, 249, 0.82);
+  color: var(--ink);
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 0.82rem;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  box-shadow: 0 8px 22px rgba(15, 23, 42, 0.05);
+  transition:
+    background 0.2s,
+    color 0.2s,
+    transform 0.18s,
+    border-color 0.2s;
+
+  svg {
+    width: 17px;
+    height: 17px;
+    stroke-width: 2;
+  }
+
+  &:hover {
+    background: var(--saffron-tint);
+    color: var(--saffron-deep);
+    border-color: var(--saffron);
+    transform: translateY(-1px);
+  }
+}

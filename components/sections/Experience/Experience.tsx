@@ -1,12 +1,20 @@
-import { education, experience } from '@/lib/content';
+'use client';
+
+import { getEducation, getExperience } from '@/lib/content';
 import styles from './Experience.module.scss';
+import { useAppLocale, useT } from '@/lib/i18n/dictionary';
 
 export default function Experience() {
+  const locale = useAppLocale();
+  const t = useT();
+  const experience = getExperience(locale);
+  const education = getEducation(locale);
+
   return (
     <section id="experience" className="block paper2">
       <div className="wrap">
         <div className={`${styles.secHead} ${styles.rise}`}>
-          <span className="eyebrow">Experience</span>
+          <span className="eyebrow">{t.experience.eyebrow}</span>
         </div>
 
         <div className={styles.exp}>
@@ -39,7 +47,7 @@ export default function Experience() {
         </div>
 
         <div className={`${styles.edu} ${styles.rise}`}>
-          <h3 className={styles.alsoHead}>Education</h3>
+          <h3 className={styles.alsoHead}>{t.experience.eduTitle}</h3>
 
           <div className={styles.eduGrid}>
             {education.map((item) => (
@@ -52,60 +60,38 @@ export default function Experience() {
           </div>
 
           <div className={styles.additionalTraining}>
-            <h4>Additional training</h4>
+            <h4>{t.experience.additionalTitle}</h4>
 
             <div className={styles.trainingGrid}>
-              <div className={styles.trainingCard}>
-                <span>Feb–Jul 2025</span>
-                <strong>BSK B2 German</strong>
-                <p>GFBM Berlin</p>
-              </div>
-
-              <div className={styles.trainingCard}>
-                <span>Apr–Jul 2026</span>
-                <strong>C1 German course</strong>
-                <p>die deutSCHule</p>
-              </div>
-
-              <div className={styles.trainingCard}>
-                <span>Apr–Jul 2026</span>
-                <strong>Product Management &amp; Product Owner Training</strong>
-                <p>
-                  Digitale Leute School · Discovery, MVP scoping, agile
-                  delivery, stakeholder communication and product metrics
-                </p>
-              </div>
+              {t.experience.training.map((item) => (
+                <div className={styles.trainingCard} key={item.what}>
+                  <span>{item.when}</span>
+                  <strong>{item.what}</strong>
+                  <p>{item.where}</p>
+                </div>
+              ))}
             </div>
           </div>
         </div>
 
         <div className={`${styles.also} ${styles.rise}`}>
           <h3 className={styles.alsoHead}>
-            Frontend <span className="accent">Project</span>
+            {t.experience.projectPre}
+            <span className="accent">{t.experience.projectAccent}</span>
           </h3>
 
           <article className={styles.proj}>
             <div className={styles.projBody}>
-              <div className={styles.projTag}>Aug 2025 - Present</div>
+              <div className={styles.projTag}>{t.experience.projDate}</div>
 
-              <h3>Ingala Earth</h3>
+              <h3>{t.experience.projName}</h3>
 
-              <p>
-                Public-facing website for a regenerative design and permaculture
-                consultancy.
-              </p>
+              <p>{t.experience.projDesc}</p>
 
               <ul className={styles.projList}>
-                <li>Built with Next.js, React, TypeScript and SCSS Modules</li>
-                <li>
-                  Translated Figma layouts into reusable, accessible UI
-                  components
-                </li>
-                <li>Static generation and lazy-loading for performance</li>
-                <li>
-                  Worked directly with the founder on content structure and
-                  brand tone
-                </li>
+                {t.experience.projBullets.map((bullet) => (
+                  <li key={bullet}>{bullet}</li>
+                ))}
               </ul>
 
               <a
@@ -114,16 +100,14 @@ export default function Experience() {
                 rel="noopener noreferrer"
                 className={styles.projLink}
               >
-                Visit ingala.earth →
+                {t.experience.projLink}
               </a>
             </div>
 
             <div className={styles.projSide}>
               <div>
                 <div className={styles.psWord}>ingala</div>
-                <div className={styles.psSub}>
-                  Regeneration &amp; Resilience
-                </div>
+                <div className={styles.psSub}>{t.experience.projSideSub}</div>
               </div>
             </div>
           </article>

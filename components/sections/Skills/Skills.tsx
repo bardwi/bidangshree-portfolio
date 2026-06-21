@@ -1,20 +1,25 @@
+'use client';
+
 import { skills } from '@/lib/content';
 import styles from './Skills.module.scss';
+import { useT } from '@/lib/i18n/dictionary';
 
 export default function Skills() {
+  const t = useT();
+
   return (
     <section id="skills" className="block">
       <div className="wrap">
         <div className={`${styles.secHead} ${styles.rise}`}>
-          <span className="eyebrow">Skills</span>
-          <h2>Product work shaped by users, UX, and technical feasibility.</h2>
+          <span className="eyebrow">{t.skills.eyebrow}</span>
+          <h2>{t.skills.title}</h2>
         </div>
 
         <div className={styles.skillGroups}>
           <div
             className={`${styles.skillGroup} ${styles.feature} ${styles.rise}`}
           >
-            <h3>Product</h3>
+            <h3>{t.skills.groupProduct}</h3>
             <div className={styles.chips}>
               {skills.product.map((skill) => (
                 <span className={styles.chip} key={skill}>
@@ -25,7 +30,7 @@ export default function Skills() {
           </div>
 
           <div className={`${styles.skillGroup} ${styles.rise}`}>
-            <h3>Engineering</h3>
+            <h3>{t.skills.groupEngineering}</h3>
             <div className={styles.chips}>
               {skills.engineering.map((skill) => (
                 <span className={styles.chip} key={skill}>
@@ -36,7 +41,7 @@ export default function Skills() {
           </div>
 
           <div className={`${styles.skillGroup} ${styles.rise}`}>
-            <h3>Tools</h3>
+            <h3>{t.skills.groupTools}</h3>
             <div className={styles.chips}>
               {skills.tools.map((skill) => (
                 <span className={styles.chip} key={skill}>
@@ -48,20 +53,15 @@ export default function Skills() {
         </div>
 
         <div className={`${styles.langs} ${styles.rise}`}>
-          <h3 className={styles.langsTitle}>Languages</h3>
+          <h3 className={styles.langsTitle}>{t.skills.langsTitle}</h3>
 
           <div className={styles.langRow}>
-            <div className={styles.lang}>
-              <span className={styles.langName}>English</span>
-              <span className={styles.langLevel}>C1 · Full professional</span>
-            </div>
-
-            <div className={styles.lang}>
-              <span className={styles.langName}>German</span>
-              <span className={styles.langLevel}>
-                B2 · C1 course in progress
-              </span>
-            </div>
+            {t.skills.langs.map((lang) => (
+              <div className={styles.lang} key={lang.name}>
+                <span className={styles.langName}>{lang.name}</span>
+                <span className={styles.langLevel}>{lang.level}</span>
+              </div>
+            ))}
           </div>
         </div>
       </div>

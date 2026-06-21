@@ -1,50 +1,51 @@
+'use client';
+
 import Image from 'next/image';
 import Link from 'next/link';
+//import { Link } from '@/i18n/navigation';
 import { Socials } from '@/components/ui/Icons';
 import styles from './Hero.module.scss';
+import { useT } from '@/lib/i18n/dictionary';
 
 export default function Hero() {
+  const t = useT();
+
   return (
     <section id="top" className={styles.hero}>
       <div className={`wrap ${styles.heroGrid}`}>
         <div className={styles.heroText}>
-          <span className={`eyebrow ${styles.rise}`}>
-            Bidangshree Brahma - Berlin
-          </span>
+          <span className={`eyebrow ${styles.rise}`}>{t.hero.eyebrow}</span>
 
           <h1 className={styles.rise}>
-            Translating user needs into <em>effortless</em>
+            {t.hero.titlePre}
+            <em>{t.hero.titleEm}</em>
             <br />
-            product experiences.
+            {t.hero.titlePost}
           </h1>
 
-          <p className={`${styles.lede} ${styles.rise}`}>
-            Product Owner / Product Manager in Berlin with a frontend background
-            and a strong focus on UX/UI. I turn insights into clear MVP scopes,
-            prioritized backlogs, and practical prototypes teams can build.
-          </p>
+          <p className={`${styles.lede} ${styles.rise}`}>{t.hero.lede}</p>
 
           <div className={`${styles.heroCta} ${styles.rise}`}>
             <Link
               href="/case-studies/linguahub"
               className={`${styles.btn} ${styles.btnSolid}`}
             >
-              View LinguaHub case study
+              {t.hero.ctaPrimary}
             </Link>
 
             <Link
               href="#contact"
               className={`${styles.btn} ${styles.btnGhost}`}
             >
-              Get in touch
+              {t.hero.ctaSecondary}
             </Link>
           </div>
 
           <div className={`${styles.heroFeature} ${styles.rise}`}>
             <span className={styles.dot} aria-hidden="true" />
             <span>
-              <b>Featured case study:</b> LinguaHub - from user research to MVP
-              prototype.
+              <b>{t.hero.featurePre}</b>
+              {t.hero.featurePost}
             </span>
           </div>
 
@@ -68,17 +69,17 @@ export default function Hero() {
           <div className={styles.factsRow}>
             <div className={styles.fact}>
               <div className={styles.n}>7 yrs</div>
-              <div className={styles.l}>frontend &amp; UX delivery</div>
+              <div className={styles.l}>{t.hero.factExp}</div>
             </div>
 
             <div className={styles.fact}>
               <div className={styles.n}>PM/PO</div>
-              <div className={styles.l}>Bootcamp · 2026</div>
+              <div className={styles.l}>{t.hero.factBootcamp}</div>
             </div>
 
             <div className={styles.fact}>
               <div className={styles.n}>1</div>
-              <div className={styles.l}>end-to-end case study</div>
+              <div className={styles.l}>{t.hero.factCase}</div>
             </div>
           </div>
         </aside>

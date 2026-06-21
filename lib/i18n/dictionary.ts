@@ -157,6 +157,10 @@ const en = {
     email: 'Email',
     message: 'Message',
     submit: 'Send message',
+    sending: 'Sending…',
+    success:
+      "Thank you - your message has been sent. I'll get back to you soon.",
+    error: 'Something went wrong. Please try again, or email me directly.',
     mailSubjectFallback: (name: string) => `Portfolio enquiry from ${name}`,
   },
 
@@ -322,6 +326,10 @@ const de: Dict = {
     email: 'E-Mail',
     message: 'Nachricht',
     submit: 'Nachricht senden',
+    sending: 'Wird gesendet…',
+    success: 'Danke - deine Nachricht wurde gesendet. Ich melde mich bald.',
+    error:
+      'Etwas ist schiefgelaufen. Bitte versuche es erneut oder schreib mir direkt.',
     mailSubjectFallback: (name: string) => `Portfolio-Anfrage von ${name}`,
   },
 

@@ -21,9 +21,9 @@ import type { Locale } from '@/lib/i18n/config';
 export const BASE = '/case-studies/linguahub';
 
 export const FIGMA_LEARNER_PROTO_URL =
-  'https://www.figma.com/proto/Or3r609zzWdJTJEGzJVOiV/PraxisProjektBrahma?node-id=8-75&t=D7UhH3gwMo9Ql4Ao-1';
+  'https://www.figma.com/proto/leJQVPK1xuo5qieCvpBKBW/LinguaHub?node-id=3-12&t=ZVXK7FFeYw0PRlSF-1';
 export const FIGMA_TEACHER_PROTO_URL =
-  'https://www.figma.com/proto/Or3r609zzWdJTJEGzJVOiV/PraxisProjektBrahma?node-id=66-7953&t=D7UhH3gwMo9Ql4Ao-1';
+  'https://www.figma.com/proto/leJQVPK1xuo5qieCvpBKBW/LinguaHub?node-id=0-1&t=ZVXK7FFeYw0PRlSF-1';
 
 export type FlowStep = {
   title: string;

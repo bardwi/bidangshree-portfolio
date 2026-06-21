@@ -20,8 +20,8 @@ const en = {
   hero: {
     eyebrow: 'Bidangshree Brahma - Berlin',
     titlePre: 'Translating user needs into ',
-    titleEm: 'effortless',
-    titlePost: ' product experiences.',
+    titleEm: 'buildable ',
+    titlePost: 'products.',
     lede: 'Product Owner / Product Manager in Berlin with a frontend background and a strong focus on UX/UI. I turn insights into clear MVP scopes, prioritized backlogs, and practical prototypes teams can build.',
     ctaPrimary: 'View LinguaHub case study',
     ctaSecondary: 'Get in touch',
@@ -64,8 +64,7 @@ const en = {
 
   caseStudy: {
     eyebrow: 'Featured Case Study',
-    title:
-      'Designing a user experience from a real problem - not just a feature list.',
+    title: 'Designing a focused MVP from real learner and teacher needs.',
     tag: 'UX-focused Product Management · EdTech · MVP',
     sub: 'A central class material hub for adult German learners and teachers - designed around one UX goal: helping learners find lessons, homework, and course materials in one organized place.',
     snapshot: {
@@ -76,7 +75,7 @@ const en = {
       usersText: 'Adult German learners and teachers in intensive courses.',
       roleLabel: 'Role',
       roleText:
-        'UX discovery, user flows, MVP scoping, backlog, prototype and validation plan.',
+        'User research, UX discovery, user flows, MVP scoping, backlog, prototype and validation plan.',
       outcomeLabel: 'Outcome',
       outcomeText:
         'A two-release MVP plan with clear UX structure and a clickable prototype.',
@@ -105,7 +104,10 @@ const en = {
     langsTitle: 'Languages',
     langs: [
       { name: 'English', level: 'C1 · Full professional' },
-      { name: 'German', level: 'B2 · C1 course in progress' },
+      {
+        name: 'German',
+        level: 'C1 course in progress · professional working proficiency',
+      },
     ],
   },
 
@@ -184,9 +186,9 @@ const de: Dict = {
 
   hero: {
     eyebrow: 'Bidangshree Brahma - Berlin',
-    titlePre: 'Nutzerbedürfnisse in ',
-    titleEm: 'mühelose',
-    titlePost: ' Produkterlebnisse übersetzen.',
+    titlePre: 'Ich übersetze Nutzerbedürfnisse in ',
+    titleEm: 'umsetzbare ',
+    titlePost: 'Produkte.',
     lede: 'Product Owner / Product Manager in Berlin mit Frontend-Hintergrund und starkem Fokus auf UX/UI. Ich verwandle Erkenntnisse in klare MVP-Scopes, priorisierte Backlogs und praxisnahe Prototypen, die Teams umsetzen können.',
     ctaPrimary: 'LinguaHub Case Study ansehen',
     ctaSecondary: 'Kontakt aufnehmen',
@@ -230,7 +232,7 @@ const de: Dict = {
   caseStudy: {
     eyebrow: 'Ausgewählte Case Study',
     title:
-      'Eine User Experience aus einem echten Problem gestalten - nicht aus einer Feature-Liste.',
+      'Ein fokussiertes MVP aus echten Bedürfnissen von Lernenden und Lehrkräften.',
     tag: 'UX-fokussiertes Product Management · EdTech · MVP',
     sub: 'Ein zentraler Kursmaterial-Hub für erwachsene Deutschlernende und Lehrkräfte - gestaltet um ein UX-Ziel: Lernende finden Lektionen, Hausaufgaben und Kursmaterialien an einem organisierten Ort.',
     snapshot: {
@@ -241,7 +243,7 @@ const de: Dict = {
       usersText: 'Erwachsene Deutschlernende und Lehrkräfte in Intensivkursen.',
       roleLabel: 'Rolle',
       roleText:
-        'UX-Discovery, User Flows, MVP-Scoping, Backlog, Prototyp und Validierungsplan.',
+        'User Research, UX-Discovery, User Flows, MVP-Scoping, Backlog, Prototyp und Validierungsplan.',
       outcomeLabel: 'Ergebnis',
       outcomeText:
         'Ein MVP-Plan über zwei Releases mit klarer UX-Struktur und klickbarem Prototyp.',
@@ -270,7 +272,7 @@ const de: Dict = {
     langsTitle: 'Sprachen',
     langs: [
       { name: 'Englisch', level: 'C1 · Verhandlungssicher' },
-      { name: 'Deutsch', level: 'B2 · C1-Kurs läuft' },
+      { name: 'Deutsch', level: 'C1-Kurs läuft · Berufliche Sprachkompetenz' },
     ],
   },
 

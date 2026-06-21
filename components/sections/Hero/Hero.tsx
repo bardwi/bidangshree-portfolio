@@ -19,7 +19,7 @@ export default function Hero() {
           <h1 className={styles.rise}>
             {t.hero.titlePre}
             <em>{t.hero.titleEm}</em>
-            <br />
+
             {t.hero.titlePost}
           </h1>
 

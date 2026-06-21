@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { useState } from 'react';
 import { Socials } from '@/components/ui/Icons';
 import styles from './Contact.module.scss';
+import { useT } from '@/lib/i18n/dictionary';
 
 type ContactFormState = {
   fn: string;
@@ -24,6 +25,7 @@ const initialFormState: ContactFormState = {
 };
 
 export default function Contact() {
+  const t = useT();
   const [form, setForm] = useState(initialFormState);
 
   const handleChange =
@@ -39,7 +41,7 @@ export default function Contact() {
     event.preventDefault();
 
     const subject = encodeURIComponent(
-      form.su || `Portfolio enquiry from ${form.fn}`,
+      form.su || t.contact.mailSubjectFallback(form.fn),
     );
 
     const body = encodeURIComponent(
@@ -57,10 +59,8 @@ ${form.ms}`,
     <section id="contact" className="block paper2">
       <div className="wrap">
         <div className={`${styles.secHead} ${styles.rise}`}>
-          <span className="eyebrow">Contact</span>
-          <h2>
-            Let&apos;s talk about product, UX, and meaningful digital work.
-          </h2>
+          <span className="eyebrow">{t.contact.eyebrow}</span>
+          <h2>{t.contact.title}</h2>
         </div>
 
         <div className={styles.contactGrid}>
@@ -75,11 +75,7 @@ ${form.ms}`,
               />
             </div>
 
-            <p>
-              Product Owner / Product Manager in Berlin with frontend
-              engineering and UX experience. I like working on digital products
-              that are useful, clear, and built around real user needs.
-            </p>
+            <p>{t.contact.intro}</p>
 
             <Socials className={styles.socials} />
           </div>
@@ -87,7 +83,7 @@ ${form.ms}`,
           <form className={`${styles.form} ${styles.rise}`} onSubmit={sendMail}>
             <div className={styles.field}>
               <label htmlFor="fn">
-                First name <span className={styles.req}>*</span>
+                {t.contact.firstName} <span className={styles.req}>*</span>
               </label>
               <input
                 id="fn"
@@ -98,23 +94,23 @@ ${form.ms}`,
             </div>
 
             <div className={styles.field}>
-              <label htmlFor="ln">Last name</label>
+              <label htmlFor="ln">{t.contact.lastName}</label>
               <input id="ln" value={form.ln} onChange={handleChange('ln')} />
             </div>
 
             <div className={styles.field}>
-              <label htmlFor="cy">Company</label>
+              <label htmlFor="cy">{t.contact.company}</label>
               <input id="cy" value={form.cy} onChange={handleChange('cy')} />
             </div>
 
             <div className={styles.field}>
-              <label htmlFor="su">Subject</label>
+              <label htmlFor="su">{t.contact.subject}</label>
               <input id="su" value={form.su} onChange={handleChange('su')} />
             </div>
 
             <div className={`${styles.field} ${styles.full}`}>
               <label htmlFor="em">
-                Email <span className={styles.req}>*</span>
+                {t.contact.email} <span className={styles.req}>*</span>
               </label>
               <input
                 id="em"
@@ -127,7 +123,7 @@ ${form.ms}`,
 
             <div className={`${styles.field} ${styles.full}`}>
               <label htmlFor="ms">
-                Message <span className={styles.req}>*</span>
+                {t.contact.message} <span className={styles.req}>*</span>
               </label>
               <textarea
                 id="ms"
@@ -138,7 +134,7 @@ ${form.ms}`,
             </div>
 
             <button type="submit" className={styles.submit}>
-              Send message
+              {t.contact.submit}
             </button>
           </form>
         </div>

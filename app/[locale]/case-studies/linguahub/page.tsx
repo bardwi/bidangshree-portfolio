@@ -1,28 +1,16 @@
 'use client';
 import Image from 'next/image';
-import Link from 'next/link';
 import { useEffect, useState } from 'react';
-import { FiArrowLeft, FiArrowRight, FiLayers } from 'react-icons/fi';
+import { FiArrowLeft, FiArrowRight, FiGlobe, FiLayers } from 'react-icons/fi';
+import { Link, usePathname } from '@/i18n/navigation';
+import { useAppLocale } from '@/lib/i18n/dictionary';
 import FigmaPrototypeEmbed from './FigmaPrototypeEmbed';
 import styles from './LinguaHubCaseStudy.module.scss';
 import {
   BASE,
   FIGMA_LEARNER_PROTO_URL,
   FIGMA_TEACHER_PROTO_URL,
-  navItems,
-  heroFacts,
-  targetGroups,
-  methods,
-  affinityClusters,
-  insights,
-  productValues,
-  solutionFeatures,
-  learnerFlow,
-  teacherFlow,
-  roadmap,
-  kpis,
-  learnings,
-  interviewStats,
+  getCaseStudy,
   type FlowStep,
 } from './content';
 
@@ -55,11 +43,13 @@ function FlowExplorer({
   title,
   summary,
   steps,
+  stepLabel,
 }: {
   label: string;
   title: string;
   summary: string;
   steps: FlowStep[];
+  stepLabel: string;
 }) {
   const [activeIndex, setActiveIndex] = useState(0);
   const activeStep = steps[activeIndex];
@@ -108,7 +98,7 @@ function FlowExplorer({
         </div>
         <div>
           <div className={styles.flowMeta}>
-            Step {String(activeIndex + 1).padStart(2, '0')}
+            {stepLabel} {String(activeIndex + 1).padStart(2, '0')}
           </div>
           <h4>{activeStep.title}</h4>
           <p>{activeStep.description}</p>
@@ -120,6 +110,12 @@ function FlowExplorer({
 }
 
 export default function LinguaHubCaseStudyPage() {
+  const locale = useAppLocale();
+  const pathname = usePathname();
+  const otherLocale = locale === 'de' ? 'en' : 'de';
+  const c = getCaseStudy(locale);
+  const ui = c.ui;
+  const S = c.sections;
   const [activeId, setActiveId] = useState('intro');
 
   useEffect(() => {
@@ -139,7 +135,7 @@ export default function LinguaHubCaseStudyPage() {
     );
     revealEls.forEach((el) => revealObs.observe(el));
 
-    const spyTargets = navItems
+    const spyTargets = c.navItems
       .map((item) => document.getElementById(item.id))
       .filter((el): el is HTMLElement => Boolean(el));
     const spyObs = new IntersectionObserver(
@@ -156,7 +152,7 @@ export default function LinguaHubCaseStudyPage() {
       revealObs.disconnect();
       spyObs.disconnect();
     };
-  }, []);
+  }, [c.navItems]);
 
   const handleNavClick = (
     e: React.MouseEvent<HTMLAnchorElement>,
@@ -177,7 +173,7 @@ export default function LinguaHubCaseStudyPage() {
           Lingua<em>Hub</em>
         </Link>
         <nav className={styles.navLinks} aria-label="Case study navigation">
-          {navItems.map((item) => (
+          {c.navItems.map((item) => (
             <a
               href={`#${item.id}`}
               key={item.id}
@@ -188,34 +184,44 @@ export default function LinguaHubCaseStudyPage() {
             </a>
           ))}
         </nav>
-        <span className={styles.navTag}>Case Study</span>
+        <div className={styles.topNavMeta}>
+          <Link
+            href={pathname}
+            locale={otherLocale}
+            className={styles.langToggle}
+            aria-label={
+              locale === 'de' ? 'View in English' : 'Auf Deutsch ansehen'
+            }
+          >
+            <FiGlobe aria-hidden="true" />
+            <span>{otherLocale.toUpperCase()}</span>
+          </Link>
+          <span className={styles.navTag}>{ui.caseStudyTag}</span>
+        </div>
       </header>
 
       {/* ===== INTRO ===== */}
       <section id="intro" className={styles.hero}>
         <div className={styles.heroInner}>
-          <Link href="/#linguahub" className={styles.backLink}>
-            <FiArrowLeft aria-hidden="true" /> Back to portfolio
+          <Link href="/#" className={styles.backLink}>
+            <FiArrowLeft aria-hidden="true" /> {ui.backToPortfolio}
           </Link>
           <div className={styles.pillRow}>
-            <span>Product case study</span>
-            <span>MVP design</span>
-            <span>User research</span>
+            {ui.pills.map((pill) => (
+              <span key={pill}>{pill}</span>
+            ))}
           </div>
           <h1>
             Lingua<em>Hub</em>
           </h1>
           <p className={styles.heroLead}>
-            A digital course hub that helps German learners find lessons,
-            materials, homework and topics in one <em>organized</em> place.
+            {ui.heroLeadPre}
+            <em>{ui.heroLeadEm}</em>
+            {ui.heroLeadPost}
           </p>
-          <p className={styles.heroText}>
-            Based on scattered PDFs, links, notes and course information, I
-            shaped a focused MVP concept: LinguaHub gives learners orientation
-            and teachers a simple publishing flow.
-          </p>
+          <p className={styles.heroText}>{ui.heroText}</p>
           <dl className={styles.heroFacts}>
-            {heroFacts.map(([label, value]) => (
+            {c.heroFacts.map(([label, value]) => (
               <div key={label}>
                 <dt>{label}</dt>
                 <dd>{value}</dd>
@@ -231,7 +237,8 @@ export default function LinguaHubCaseStudyPage() {
               alt="LinguaHub learner course home screen"
               caption={
                 <>
-                  <b>Course home</b> - today&apos;s lesson and material first
+                  <b>{ui.phoneCaptions.homeTitle}</b>
+                  {ui.phoneCaptions.homeText}
                 </>
               }
             />
@@ -241,7 +248,8 @@ export default function LinguaHubCaseStudyPage() {
               alt="LinguaHub course overview screen"
               caption={
                 <>
-                  <b>Course overview</b> - lessons, topics and progress
+                  <b>{ui.phoneCaptions.overviewTitle}</b>
+                  {ui.phoneCaptions.overviewText}
                 </>
               }
             />
@@ -251,7 +259,8 @@ export default function LinguaHubCaseStudyPage() {
               alt="LinguaHub teacher lesson builder screen"
               caption={
                 <>
-                  <b>Lesson builder</b> - prepare, tag and save lessons
+                  <b>{ui.phoneCaptions.builderTitle}</b>
+                  {ui.phoneCaptions.builderText}
                 </>
               }
             />
@@ -262,27 +271,14 @@ export default function LinguaHubCaseStudyPage() {
       <section className={styles.sectionWhite}>
         <div className={`${styles.sectionInnerTwo} ${styles.reveal}`}>
           <div>
-            <span className={styles.sectionKicker}>01 - Intro / Project</span>
-            <h2>Starting point</h2>
-            <p>
-              I developed LinguaHub as a product management case study for
-              German language courses. The starting point was a familiar problem
-              in classroom learning: the content exists, but it is spread across
-              too many channels.
-            </p>
-            <p>
-              My goal was to turn this problem into a clear MVP: not a large
-              learning management system, but a focused course hub that makes
-              everyday learning and teaching easier.
-            </p>
+            <span className={styles.sectionKicker}>{S.intro.kicker}</span>
+            <h2>{S.intro.h2}</h2>
+            <p>{S.intro.p1}</p>
+            <p>{S.intro.p2}</p>
           </div>
           <aside className={styles.assumptionCard}>
-            <span>Initial assumption</span>
-            <strong>
-              &ldquo;Learners do not simply need more material. They need
-              orientation: what belongs to which lesson, which file is important
-              and what needs to be done next?&rdquo;
-            </strong>
+            <span>{S.intro.assumptionLabel}</span>
+            <strong>{S.intro.assumptionQuote}</strong>
           </aside>
         </div>
       </section>
@@ -290,25 +286,17 @@ export default function LinguaHubCaseStudyPage() {
       {/* ===== PROBLEM ===== */}
       <section id="problem" className={styles.sectionSoft}>
         <div className={`${styles.sectionInner} ${styles.reveal}`}>
-          <span className={styles.sectionKicker}>02 - Problem</span>
-          <h2>The first hypothesis</h2>
-          <p className={styles.narrowText}>
-            My first hypothesis was that the main problem in German courses is
-            not a lack of material. The problem appears when materials, links,
-            notes and homework are not clearly connected to lessons and topics.
-          </p>
+          <span className={styles.sectionKicker}>{S.problem.kicker}</span>
+          <h2>{S.problem.h2}</h2>
+          <p className={styles.narrowText}>{S.problem.text}</p>
           <div className={styles.tagRow}>
-            <span>scattered</span>
-            <span>time-consuming</span>
-            <span>unclear</span>
-            <span>repeated questions</span>
+            {S.problem.tags.map((tag) => (
+              <span key={tag}>{tag}</span>
+            ))}
           </div>
           <div className={styles.darkQuestion}>
-            <span>Original question</span>
-            <strong>
-              How might we help learners find course material quickly while
-              allowing teachers to publish lessons without extra workload?
-            </strong>
+            <span>{S.problem.questionLabel}</span>
+            <strong>{S.problem.question}</strong>
           </div>
         </div>
       </section>
@@ -316,15 +304,11 @@ export default function LinguaHubCaseStudyPage() {
       {/* ===== RESEARCH ===== */}
       <section id="research" className={styles.sectionWhite}>
         <div className={`${styles.sectionInner} ${styles.reveal}`}>
-          <span className={styles.sectionKicker}>03 - Target users</span>
-          <h2>Users I focused on</h2>
-          <p className={styles.narrowText}>
-            I looked at three perspectives. The MVP needs to be easy for
-            learners, fast enough for teachers and useful for course providers
-            who want a clearer digital learning structure.
-          </p>
+          <span className={styles.sectionKicker}>{S.target.kicker}</span>
+          <h2>{S.target.h2}</h2>
+          <p className={styles.narrowText}>{S.target.text}</p>
           <div className={styles.targetGrid}>
-            {targetGroups.map((group) => (
+            {c.targetGroups.map((group) => (
               <article
                 className={`${styles.targetCard} ${group.active ? styles.activeTarget : ''}`}
                 key={group.number}
@@ -341,23 +325,15 @@ export default function LinguaHubCaseStudyPage() {
       <section className={styles.sectionSoft}>
         <div className={`${styles.sectionInnerTwo} ${styles.reveal}`}>
           <div>
-            <span className={styles.sectionKicker}>04 - Research</span>
-            <h2>User research &amp; discovery</h2>
-            <p>
-              I conducted user interviews with 4 German learners and 1 teacher,
-              then combined the findings with journey mapping, story mapping and
-              MVP prioritization exercises.
-            </p>
-            <p>
-              The research focused on two questions: where do learners lose
-              orientation in daily course life, and where does the publishing
-              process become too much effort for teachers?
-            </p>
+            <span className={styles.sectionKicker}>{S.research.kicker}</span>
+            <h2>{S.research.h2}</h2>
+            <p>{S.research.p1}</p>
+            <p>{S.research.p2}</p>
           </div>
           <aside className={styles.methodCard}>
-            <span>Methods</span>
+            <span>{S.research.methodsLabel}</span>
             <ul>
-              {methods.map((method) => (
+              {c.methods.map((method) => (
                 <li key={method}>{method}</li>
               ))}
             </ul>
@@ -367,7 +343,7 @@ export default function LinguaHubCaseStudyPage() {
           className={`${styles.userInterviewStats} ${styles.reveal}`}
           aria-label="Research sample"
         >
-          {interviewStats.map(([number, label]) => (
+          {c.interviewStats.map(([number, label]) => (
             <div key={label}>
               <strong>{number}</strong>
               <span>{label}</span>
@@ -375,12 +351,12 @@ export default function LinguaHubCaseStudyPage() {
           ))}
         </div>
         <div className={`${styles.affinityBoard} ${styles.reveal}`}>
-          <span>Affinity mapping - clusters from user problems</span>
+          <span>{S.research.affinityLabel}</span>
           <div>
-            {affinityClusters.map(([title, notes]) => (
-              <article key={title as string}>
+            {c.affinityClusters.map(([title, notes]) => (
+              <article key={title}>
                 <h3>{title}</h3>
-                {(notes as string[]).map((note) => (
+                {notes.map((note) => (
                   <p key={note}>{note}</p>
                 ))}
               </article>
@@ -392,10 +368,10 @@ export default function LinguaHubCaseStudyPage() {
       {/* ===== INSIGHTS ===== */}
       <section id="insights" className={styles.sectionWhite}>
         <div className={`${styles.sectionInner} ${styles.reveal}`}>
-          <span className={styles.sectionKicker}>05 - Insights</span>
-          <h2>What the research showed</h2>
+          <span className={styles.sectionKicker}>{S.insights.kicker}</span>
+          <h2>{S.insights.h2}</h2>
           <div className={styles.insightList}>
-            {insights.map((insight) => (
+            {c.insights.map((insight) => (
               <article className={styles.insightCard} key={insight.number}>
                 <span>{insight.number}</span>
                 <div>
@@ -411,43 +387,29 @@ export default function LinguaHubCaseStudyPage() {
             ))}
           </div>
           <div className={styles.blueInsight}>
-            <span>The key insight</span>
-            <strong>
-              The real problem is not missing content. The problem starts when
-              learners have to search for material without clear course context.
-            </strong>
-            <p>
-              That is why LinguaHub organizes content around lessons, topics and
-              tasks instead of becoming a loose file storage system.
-            </p>
+            <span>{S.insights.keyLabel}</span>
+            <strong>{S.insights.keyStrong}</strong>
+            <p>{S.insights.keyText}</p>
           </div>
         </div>
       </section>
 
       <section className={styles.sectionSoft}>
         <div className={`${styles.sectionInner} ${styles.reveal}`}>
-          <span className={styles.sectionKicker}>06 - Problem reframing</span>
-          <h2>A sharper product focus</h2>
-          <p className={styles.narrowText}>
-            After research and exercises, the original problem felt too broad. I
-            reframed the challenge around learner orientation and a realistic
-            teacher workflow.
-          </p>
+          <span className={styles.sectionKicker}>{S.reframe.kicker}</span>
+          <h2>{S.reframe.h2}</h2>
+          <p className={styles.narrowText}>{S.reframe.text}</p>
           <div className={styles.reframeGrid}>
             <article>
-              <span>Before</span>
-              <strong>How can we organize course materials digitally?</strong>
+              <span>{S.reframe.beforeLabel}</span>
+              <strong>{S.reframe.before}</strong>
             </article>
             <div className={styles.arrowDot}>
               <FiArrowRight aria-hidden="true" />
             </div>
             <article className={styles.afterCard}>
-              <span>After</span>
-              <strong>
-                How can we help German learners find material in the right
-                lesson and topic context, while teachers can prepare and publish
-                content quickly?
-              </strong>
+              <span>{S.reframe.afterLabel}</span>
+              <strong>{S.reframe.after}</strong>
             </article>
           </div>
         </div>
@@ -456,26 +418,16 @@ export default function LinguaHubCaseStudyPage() {
       {/* ===== SOLUTION ===== */}
       <section id="solution" className={styles.sectionWhite}>
         <div className={`${styles.sectionInner} ${styles.reveal}`}>
-          <span className={styles.sectionKicker}>07 - Idea / Concept</span>
-          <h2>LinguaHub</h2>
-          <h3 className={styles.blueSubline}>
-            A digital course hub for German classes.
-          </h3>
-          <p className={styles.narrowText}>
-            LinguaHub is not a full learning management system. It is a focused
-            course hub that brings together lessons, materials, homework, topics
-            and course information.
-          </p>
+          <span className={styles.sectionKicker}>{S.concept.kicker}</span>
+          <h2>{S.concept.h2}</h2>
+          <h3 className={styles.blueSubline}>{S.concept.subline}</h3>
+          <p className={styles.narrowText}>{S.concept.text}</p>
           <div className={styles.valueBox}>
-            <span>Value proposition</span>
-            <strong>
-              German learners quickly find what belongs to the current or
-              previous lesson - and teachers publish content once instead of
-              repeatedly sharing it through different channels.
-            </strong>
+            <span>{S.concept.valueLabel}</span>
+            <strong>{S.concept.valueStrong}</strong>
           </div>
           <div className={styles.valueGrid}>
-            {productValues.map((value) => {
+            {c.productValues.map((value) => {
               const Icon = value.icon;
               return (
                 <article key={value.title}>
@@ -493,18 +445,11 @@ export default function LinguaHubCaseStudyPage() {
         <div className={`${styles.solutionInner} ${styles.reveal}`}>
           <div className={styles.solutionSplit}>
             <div>
-              <span className={styles.sectionKicker}>
-                08 - Solution / Design
-              </span>
-              <h2>Product vision</h2>
-              <p className={styles.narrowText}>
-                LinguaHub connects the most important learner and teacher
-                workflows: finding content, opening lessons, using materials,
-                checking homework and preparing lessons. Tap through the live
-                learner prototype to see how the experience holds together.
-              </p>
+              <span className={styles.sectionKicker}>{S.solution.kicker}</span>
+              <h2>{S.solution.h2}</h2>
+              <p className={styles.narrowText}>{S.solution.text}</p>
               <div className={styles.featureList}>
-                {solutionFeatures.map(([title, text]) => (
+                {c.solutionFeatures.map(([title, text]) => (
                   <article key={title}>
                     <FiLayers aria-hidden="true" />
                     <div>
@@ -518,9 +463,9 @@ export default function LinguaHubCaseStudyPage() {
 
             <aside className={styles.solutionAside}>
               <FigmaPrototypeEmbed
-                label="Learner prototype"
-                title="Explore the learner flow"
-                description="The learner prototype shows how adult German learners enter the course, find lessons, open material and check homework."
+                label={S.solution.learnerProto.label}
+                title={S.solution.learnerProto.title}
+                description={S.solution.learnerProto.description}
                 url={FIGMA_LEARNER_PROTO_URL}
               />
             </aside>
@@ -528,9 +473,9 @@ export default function LinguaHubCaseStudyPage() {
 
           <div className={styles.teacherProtoRow}>
             <FigmaPrototypeEmbed
-              label="Teacher prototype"
-              title="Explore the teacher flow"
-              description="The teacher prototype shows how teachers prepare lessons, add material, preview content, save drafts and publish when ready."
+              label={S.solution.teacherProto.label}
+              title={S.solution.teacherProto.title}
+              description={S.solution.teacherProto.description}
               url={FIGMA_TEACHER_PROTO_URL}
             />
           </div>
@@ -539,34 +484,29 @@ export default function LinguaHubCaseStudyPage() {
 
       <section className={styles.sectionWhite}>
         <div className={`${styles.sectionInner} ${styles.reveal}`}>
-          <span className={styles.sectionKicker}>09 - User Flow</span>
-          <h2>Tap through the key flows</h2>
-          <p className={styles.narrowText}>
-            The flow steps below are tappable. Each step explains the user goal,
-            why it exists and how it supports the MVP experience.
-          </p>
+          <span className={styles.sectionKicker}>{S.flow.kicker}</span>
+          <h2>{S.flow.h2}</h2>
+          <p className={styles.narrowText}>{S.flow.text}</p>
           <FlowExplorer
-            label="Learner"
-            title="Invitation → Course → Lesson → Material"
-            summary="Learners start from an invitation, open the course and find the right material through lessons, topics or homework."
-            steps={learnerFlow}
+            label={S.flow.learner.label}
+            title={S.flow.learner.title}
+            summary={S.flow.learner.summary}
+            steps={c.learnerFlow}
+            stepLabel={ui.stepLabel}
           />
           <FlowExplorer
-            label="Teacher"
-            title="Prepare lesson → Preview → Draft or Publish"
-            summary="Teachers prepare lessons, add material, check the preview and decide whether to save as draft or publish."
-            steps={teacherFlow}
+            label={S.flow.teacher.label}
+            title={S.flow.teacher.title}
+            summary={S.flow.teacher.summary}
+            steps={c.teacherFlow}
+            stepLabel={ui.stepLabel}
           />
 
           <div className={`${styles.published} ${styles.reveal}`}>
             <div>
-              <span>Preview → publish</span>
-              <h3>The teacher sees exactly what the learner will see.</h3>
-              <p>
-                The last step before going live is the learner&apos;s own view —
-                so the teacher publishes with confidence, and the whole class is
-                notified the moment it ships.
-              </p>
+              <span>{S.flow.publishedLabel}</span>
+              <h3>{S.flow.publishedTitle}</h3>
+              <p>{S.flow.publishedText}</p>
             </div>
             <div className={styles.publishedShot}>
               <Phone
@@ -581,23 +521,19 @@ export default function LinguaHubCaseStudyPage() {
       {/* ===== MVP ROADMAP ===== */}
       <section id="mvp" className={styles.sectionSoft}>
         <div className={`${styles.sectionInner} ${styles.reveal}`}>
-          <span className={styles.sectionKicker}>10 - MVP roadmap</span>
-          <h2>A 6-month outcome roadmap</h2>
-          <p className={styles.narrowText}>
-            I sequenced the backlog into two releases across six months. Each
-            phase has a goal and a measurable outcome - and the detail loosens
-            toward the back, since later months are deliberately coarser.
-          </p>
+          <span className={styles.sectionKicker}>{S.roadmap.kicker}</span>
+          <h2>{S.roadmap.h2}</h2>
+          <p className={styles.narrowText}>{S.roadmap.text}</p>
           <div className={styles.roadLegend}>
             <span className={`${styles.roadKey} ${styles.roadKeyR1}`}>
-              Release 1 · core value
+              {S.roadmap.legendR1}
             </span>
             <span className={`${styles.roadKey} ${styles.roadKeyR2}`}>
-              Release 2 · orientation &amp; workflow
+              {S.roadmap.legendR2}
             </span>
           </div>
           <div className={styles.roadTrack}>
-            {roadmap.map((phase) => (
+            {c.roadmap.map((phase) => (
               <article
                 className={`${styles.roadCard} ${phase.release === 'r1' ? styles.roadCardR1 : styles.roadCardR2}`}
                 key={phase.month}
@@ -614,16 +550,11 @@ export default function LinguaHubCaseStudyPage() {
 
       <section className={styles.sectionWhite}>
         <div className={`${styles.sectionInner} ${styles.reveal}`}>
-          <span className={styles.sectionKicker}>
-            11 - KPIs &amp; validation
-          </span>
-          <h2>How I would measure the MVP</h2>
-          <p className={styles.narrowText}>
-            The KPIs are directly connected to prototype tasks, so they can be
-            checked before a large launch.
-          </p>
+          <span className={styles.sectionKicker}>{S.kpis.kicker}</span>
+          <h2>{S.kpis.h2}</h2>
+          <p className={styles.narrowText}>{S.kpis.text}</p>
           <div className={styles.kpiGrid}>
-            {kpis.map(([goal, metric, target, deadline]) => (
+            {c.kpis.map(([goal, metric, target, deadline]) => (
               <article key={goal}>
                 <span>{goal}</span>
                 <h3>{metric}</h3>
@@ -637,10 +568,10 @@ export default function LinguaHubCaseStudyPage() {
 
       <section className={styles.sectionWhite}>
         <div className={`${styles.sectionInner} ${styles.reveal}`}>
-          <span className={styles.sectionKicker}>12 - Learnings</span>
-          <h2>What I learned</h2>
+          <span className={styles.sectionKicker}>{S.learnings.kicker}</span>
+          <h2>{S.learnings.h2}</h2>
           <div className={styles.learningGrid}>
-            {learnings.map(([number, title, text]) => (
+            {c.learnings.map(([number, title, text]) => (
               <article key={number}>
                 <div>
                   <h3>{title}</h3>
@@ -655,30 +586,16 @@ export default function LinguaHubCaseStudyPage() {
 
       <section className={styles.finalBlue}>
         <div className={styles.reveal}>
-          <span>Final outcome</span>
-          <h2>
-            What started as a material organization idea became a focused course
-            hub for German learners and teachers.
-          </h2>
-          <p>
-            Through user interviews, story mapping, reframing and MVP
-            prioritization, I shaped a focused product concept: learners find
-            content faster, while teachers keep control over drafts and
-            publication.
-          </p>
+          <span>{S.final.label}</span>
+          <h2>{S.final.h2}</h2>
+          <p>{S.final.text}</p>
           <div className={styles.finalStats}>
-            <div>
-              <strong>5</strong>
-              <span>user interviews</span>
-            </div>
-            <div>
-              <strong>2</strong>
-              <span>core flows</span>
-            </div>
-            <div>
-              <strong>1</strong>
-              <span>focused MVP</span>
-            </div>
+            {S.final.stats.map((stat, i) => (
+              <div key={S.final.statLabels[i]}>
+                <strong>{stat}</strong>
+                <span>{S.final.statLabels[i]}</span>
+              </div>
+            ))}
           </div>
         </div>
       </section>

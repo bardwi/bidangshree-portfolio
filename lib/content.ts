@@ -149,7 +149,6 @@ export const skills = {
     'Stakeholder Management',
     'Scrum & Agile',
     'Usability Testing',
-    'Wireframing & Flows',
     'OKRs, KPIs & Metrics',
   ],
   engineering: [

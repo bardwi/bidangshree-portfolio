@@ -1,63 +1,34 @@
-// import Link from 'next/link';
+'use client';
+
 import styles from './Bootcamp.module.scss';
+import { useT } from '@/lib/i18n/dictionary';
 
 export default function Bootcamp() {
+  const t = useT();
+
   return (
     <section id="bootcamp" className="block">
       <div className="wrap">
         <div className={`${styles.boot} ${styles.rise}`}>
           <div>
             <span className={`eyebrow ${styles.eyebrow}`}>
-              Professional Training · 2026
+              {t.bootcamp.eyebrow}
             </span>
 
-            <h3>Product Management &amp; Product Owner Training</h3>
+            <h3>{t.bootcamp.title}</h3>
 
-            <div className={styles.meta}>
-              Digitale Leute School · Remote · Apr–Jul 2026
-            </div>
+            <div className={styles.meta}>{t.bootcamp.meta}</div>
 
-            <p>
-              Product Management and Product Owner training focused on product
-              discovery, UX strategy, MVP scoping, agile delivery, stakeholder
-              communication, and product metrics. I applied these methods
-              through LinguaHub, a UX-focused EdTech case study with research,
-              user flows, backlog structure, release planning, KPIs, and a
-              clickable prototype.
-            </p>
-
-            {/* <Link
-              href="/case-studies/linguahub"
-              className={styles.trainingLink}
-            >
-              View applied case study
-            </Link> */}
+            <p>{t.bootcamp.body}</p>
           </div>
 
           <div className={styles.bootFacts}>
-            <div className={styles.fact}>
-              <div className={styles.factNumber}>Discovery</div>
-
-              <div className={styles.factLabel}>
-                user research &amp; problem framing
+            {t.bootcamp.facts.map((fact) => (
+              <div className={styles.fact} key={fact.number}>
+                <div className={styles.factNumber}>{fact.number}</div>
+                <div className={styles.factLabel}>{fact.label}</div>
               </div>
-            </div>
-
-            <div className={styles.fact}>
-              <div className={styles.factNumber}>MVP</div>
-
-              <div className={styles.factLabel}>
-                scope, backlog &amp; release planning
-              </div>
-            </div>
-
-            <div className={styles.fact}>
-              <div className={styles.factNumber}>Prototype</div>
-
-              <div className={styles.factLabel}>
-                flows, validation &amp; KPIs
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </div>

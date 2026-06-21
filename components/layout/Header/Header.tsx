@@ -1,25 +1,20 @@
 'use client';
 
 import Image from 'next/image';
-import Link from 'next/link';
 import { useEffect, useState } from 'react';
-import { FiMenu, FiX } from 'react-icons/fi';
+import { FiGlobe, FiMenu, FiX } from 'react-icons/fi';
 import styles from './Header.module.scss';
-import { usePathname } from 'next/navigation';
-
-const navItems = [
-  { label: 'About', href: '/#about' },
-  { label: 'Case Study', href: '/#linguahub' },
-  { label: 'Bootcamp', href: '/#bootcamp' },
-  { label: 'Experience', href: '/#experience' },
-  { label: 'Skills', href: '/#skills' },
-];
+import { Link, usePathname } from '@/i18n/navigation';
+import { useAppLocale, useT } from '@/lib/i18n/dictionary';
 
 export default function Header() {
-  const pathname = usePathname();
+  const pathname = usePathname(); // locale-stripped path, e.g. "/case-studies/..."
+  const locale = useAppLocale();
+  const t = useT();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const isCaseStudyPage = pathname.startsWith('/case-studies');
+  const otherLocale = locale === 'de' ? 'en' : 'de';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -57,7 +52,7 @@ export default function Header() {
 
         <nav className={`${styles.navMenu} ${isMenuOpen ? styles.open : ''}`}>
           <ul className={styles.navLinks}>
-            {navItems.map((item) => (
+            {t.nav.items.map((item) => (
               <li key={item.href}>
                 <Link href={item.href} onClick={closeMenu}>
                   {item.label}
@@ -71,17 +66,28 @@ export default function Header() {
                 className={styles.pill}
                 onClick={closeMenu}
               >
-                Let&apos;s talk
+                {t.nav.cta}
               </Link>
             </li>
           </ul>
         </nav>
 
         <div className={styles.navActions}>
+          <Link
+            href={pathname}
+            locale={otherLocale}
+            className={styles.langBtn}
+            aria-label={t.nav.switchTo}
+            title={t.nav.switchTo}
+          >
+            <FiGlobe aria-hidden="true" />
+            <span>{otherLocale.toUpperCase()}</span>
+          </Link>
+
           <button
             type="button"
             className={styles.menuBtn}
-            aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
+            aria-label={isMenuOpen ? t.nav.closeMenu : t.nav.openMenu}
             aria-expanded={isMenuOpen}
             onClick={() => setIsMenuOpen((current) => !current)}
           >

@@ -327,7 +327,7 @@ const de: Dict = {
     message: 'Nachricht',
     submit: 'Nachricht senden',
     sending: 'Wird gesendet…',
-    success: 'Danke — deine Nachricht wurde gesendet. Ich melde mich bald.',
+    success: 'Danke - deine Nachricht wurde gesendet. Ich melde mich bald.',
     error:
       'Etwas ist schiefgelaufen. Bitte versuche es erneut oder schreib mir direkt.',
     mailSubjectFallback: (name: string) => `Portfolio-Anfrage von ${name}`,

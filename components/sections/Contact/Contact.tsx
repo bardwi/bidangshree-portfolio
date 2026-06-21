@@ -1,8 +1,9 @@
 'use client';
 
 import Image from 'next/image';
-import { useState } from 'react';
+import { useCallback, useState } from 'react';
 import { Socials } from '@/components/ui/Icons';
+import Toast from '@/components/ui/Toast/Toast';
 import styles from './Contact.module.scss';
 import { useAppLocale, useT } from '@/lib/i18n/dictionary';
 
@@ -32,6 +33,7 @@ export default function Contact() {
   const locale = useAppLocale();
   const [form, setForm] = useState(initialFormState);
   const [status, setStatus] = useState<Status>('idle');
+  const closeToast = useCallback(() => setStatus('idle'), []);
 
   const handleChange =
     (key: keyof ContactFormState) =>
@@ -170,19 +172,17 @@ export default function Contact() {
             >
               {status === 'sending' ? t.contact.sending : t.contact.submit}
             </button>
-
-            <p
-              className={styles.formStatus}
-              role="status"
-              aria-live="polite"
-              data-state={status}
-            >
-              {status === 'success' ? t.contact.success : ''}
-              {status === 'error' ? t.contact.error : ''}
-            </p>
           </form>
         </div>
       </div>
+      <Toast
+        open={status === 'success' || status === 'error'}
+        variant={status === 'error' ? 'error' : 'success'}
+        message={status === 'error' ? t.contact.error : t.contact.success}
+        duration={status === 'error' ? 10000 : 6000}
+        closeLabel={locale === 'de' ? 'Schließen' : 'Dismiss'}
+        onClose={closeToast}
+      />
     </section>
   );
 }

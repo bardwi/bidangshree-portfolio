@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { useState } from 'react';
 import { Socials } from '@/components/ui/Icons';
 import styles from './Contact.module.scss';
-import { useT } from '@/lib/i18n/dictionary';
+import { useAppLocale, useT } from '@/lib/i18n/dictionary';
 
 type ContactFormState = {
   fn: string;
@@ -13,8 +13,10 @@ type ContactFormState = {
   su: string;
   em: string;
   ms: string;
+  website: string; // Honeypot field to catch bots
 };
 
+type Status = 'idle' | 'sending' | 'success' | 'error';
 const initialFormState: ContactFormState = {
   fn: '',
   ln: '',
@@ -22,11 +24,14 @@ const initialFormState: ContactFormState = {
   su: '',
   em: '',
   ms: '',
+  website: '',
 };
 
 export default function Contact() {
   const t = useT();
+  const locale = useAppLocale();
   const [form, setForm] = useState(initialFormState);
+  const [status, setStatus] = useState<Status>('idle');
 
   const handleChange =
     (key: keyof ContactFormState) =>
@@ -37,22 +42,34 @@ export default function Contact() {
       }));
     };
 
-  const sendMail = (event: React.FormEvent<HTMLFormElement>) => {
+  const sendMail = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+    if (status === 'sending') return;
+    setStatus('sending');
 
-    const subject = encodeURIComponent(
-      form.su || t.contact.mailSubjectFallback(form.fn),
-    );
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          firstName: form.fn,
+          lastName: form.ln,
+          company: form.cy,
+          subject: form.su,
+          email: form.em,
+          message: form.ms,
+          website: form.website,
+          locale,
+        }),
+      });
 
-    const body = encodeURIComponent(
-      `Name: ${form.fn} ${form.ln}
-      Company: ${form.cy}
-      Email: ${form.em}
+      if (!res.ok) throw new Error('Request failed');
 
-${form.ms}`,
-    );
-
-    window.location.href = `mailto:bardwi.brm@gmail.com?subject=${subject}&body=${body}`;
+      setStatus('success');
+      setForm(initialFormState);
+    } catch {
+      setStatus('error');
+    }
   };
 
   return (
@@ -133,9 +150,36 @@ ${form.ms}`,
               />
             </div>
 
-            <button type="submit" className={styles.submit}>
-              {t.contact.submit}
+            {/* Honeypot: hidden from real users, catches bots. */}
+            <div className={styles.honeypot} aria-hidden="true">
+              <label htmlFor="website">Website</label>
+              <input
+                id="website"
+                name="website"
+                tabIndex={-1}
+                autoComplete="off"
+                value={form.website}
+                onChange={handleChange('website')}
+              />
+            </div>
+
+            <button
+              type="submit"
+              className={styles.submit}
+              disabled={status === 'sending'}
+            >
+              {status === 'sending' ? t.contact.sending : t.contact.submit}
             </button>
+
+            <p
+              className={styles.formStatus}
+              role="status"
+              aria-live="polite"
+              data-state={status}
+            >
+              {status === 'success' ? t.contact.success : ''}
+              {status === 'error' ? t.contact.error : ''}
+            </p>
           </form>
         </div>
       </div>

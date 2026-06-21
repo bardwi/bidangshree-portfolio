@@ -50,22 +50,10 @@ The homepage is built from focused, reusable sections:
 - Skills
 - Contact
 
-### LinguaHub Case Study
+### Featured Work
 
-LinguaHub is a UX-focused product management case study for adult German learners and teachers. The case study explores a real course problem: learning materials are often spread across chats, PDFs, links, folders, and emails.
-
-The case study includes:
-
-- Initial hypothesis and problem framing
-- User research with learners and a teacher
-- Affinity mapping and key insights
-- Problem reframing
-- Product concept and value proposition
-- Learner and teacher flows
-- Clickable Figma prototype embeds
-- MVP roadmap across two releases
-- KPI and validation plan
-- Reflections and learnings
+The portfolio includes a dedicated case study page for LinguaHub, showing a UX-focused product process from problem understanding to MVP prototype.
+The detailed case study content lives on the portfolio website.
 
 ### Privacy And Compliance
 

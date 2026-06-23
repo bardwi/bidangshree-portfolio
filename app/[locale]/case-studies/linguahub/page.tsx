@@ -233,7 +233,7 @@ export default function LinguaHubCaseStudyPage() {
             className={`${styles.heroPhones} ${styles.screensRail} ${styles.three} ${styles.reveal}`}
           >
             <Phone
-              src="course-home.png"
+              src="course-home-v2.png"
               alt="LinguaHub learner course home screen"
               caption={
                 <>

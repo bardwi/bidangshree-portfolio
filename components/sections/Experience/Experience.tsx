@@ -64,13 +64,31 @@ export default function Experience() {
             <h4>{t.experience.additionalTitle}</h4>
 
             <div className={styles.trainingGrid}>
-              {t.experience.training.map((item) => (
-                <div className={styles.trainingCard} key={item.what}>
-                  <span>{item.when}</span>
-                  <strong>{item.what}</strong>
-                  <p>{item.where}</p>
-                </div>
-              ))}
+              {t.experience.training.map((item) => {
+                const isFeatured = item.what.includes('Product Management');
+                const [provider, details] = item.where.split('\n');
+
+                return (
+                  <div
+                    className={`${styles.trainingCard} ${isFeatured ? styles.featuredTraining : ''}`}
+                    key={item.what}
+                  >
+                    <span>{item.when}</span>
+                    <strong>{item.what}</strong>
+                    <p>
+                      <span className={styles.trainingProvider}>
+                        {provider}
+                      </span>
+                      {details ? (
+                        <>
+                          {'\n'}
+                          {details}
+                        </>
+                      ) : null}
+                    </p>
+                  </div>
+                );
+              })}
             </div>
           </div>
         </div>

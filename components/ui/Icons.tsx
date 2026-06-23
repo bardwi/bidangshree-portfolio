@@ -15,7 +15,7 @@ export function Socials({ className }: IconProps) {
   return (
     <div className={className} aria-label="Social links">
       <a
-        href="https://www.linkedin.com/in/bidangshree-brahma/"
+        href="https://www.linkedin.com/in/bibrahma/"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="LinkedIn"

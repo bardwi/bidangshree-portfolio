@@ -5,5 +5,5 @@ export const routing = defineRouting({
   defaultLocale: 'de',
   // German serves at "/", English at "/en". Default locale stays unprefixed.
   localePrefix: 'as-needed',
-  localeDetection: true,
+  localeDetection: false,
 });

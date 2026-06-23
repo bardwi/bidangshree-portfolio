@@ -13,8 +13,11 @@ export default function Header() {
   const t = useT();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [activeSectionHash, setActiveSectionHash] = useState('');
   const isCaseStudyPage = pathname.startsWith('/case-studies');
   const otherLocale = locale === 'de' ? 'en' : 'de';
+  const languageHref =
+    pathname === '/' && activeSectionHash ? `/${activeSectionHash}` : pathname;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -26,6 +29,47 @@ export default function Header() {
 
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  useEffect(() => {
+    if (pathname !== '/') {
+      return;
+    }
+
+    const sections = Array.from(
+      document.querySelectorAll<HTMLElement>('section[id]'),
+    );
+
+    const updateFromHash = () => {
+      setActiveSectionHash(window.location.hash);
+    };
+
+    const initialHashFrame = window.requestAnimationFrame(updateFromHash);
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visible = entries
+          .filter((entry) => entry.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+
+        if (visible?.target.id) {
+          setActiveSectionHash(`#${visible.target.id}`);
+        }
+      },
+      {
+        rootMargin: '-35% 0px -50% 0px',
+        threshold: [0.1, 0.25, 0.5],
+      },
+    );
+
+    sections.forEach((section) => observer.observe(section));
+    window.addEventListener('hashchange', updateFromHash);
+
+    return () => {
+      window.cancelAnimationFrame(initialHashFrame);
+      observer.disconnect();
+      window.removeEventListener('hashchange', updateFromHash);
+    };
+  }, [pathname]);
 
   const closeMenu = () => setIsMenuOpen(false);
   if (isCaseStudyPage) {
@@ -74,7 +118,7 @@ export default function Header() {
 
         <div className={styles.navActions}>
           <Link
-            href={pathname}
+            href={languageHref}
             locale={otherLocale}
             className={styles.langBtn}
             aria-label={t.nav.switchTo}

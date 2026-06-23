@@ -1,8 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import Link from 'next/link';
-//import { Link } from '@/i18n/navigation';
+import { Link } from '@/i18n/navigation';
 import { Socials } from '@/components/ui/Icons';
 import styles from './Hero.module.scss';
 import { useT } from '@/lib/i18n/dictionary';

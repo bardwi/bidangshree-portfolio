@@ -57,12 +57,12 @@ export default function CookieConsentBanner() {
             consentModal: {
               title: 'Privacy preferences',
               description:
-                'This website uses necessary cookies to remember your privacy choices. Optional analytics help me understand how the portfolio is used. <a href="/datenschutz" class="cc__link">Privacy Policy</a>',
+                `This website uses necessary cookies to remember your privacy choices. Optional analytics help me understand how the portfolio is used. <a href="${p}/datenschutz" class="cc__link">Privacy Policy</a>`,
               acceptAllBtn: 'Accept all',
               acceptNecessaryBtn: 'Reject optional',
               showPreferencesBtn: 'Manage preferences',
               footer:
-                '<a href="/datenschutz">Privacy Policy</a><a href="/imprint">Imprint</a>',
+                `<a href="${p}/datenschutz">Privacy Policy</a><a href="${p}/imprint">Imprint</a>`,
             },
 
             preferencesModal: {
@@ -128,7 +128,7 @@ export default function CookieConsentBanner() {
                 {
                   title: 'More information',
                   description:
-                    'For questions about privacy or cookie settings, please <a class="cc__link" href="/#contact">contact me</a>.',
+                    `For questions about privacy or cookie settings, please <a class="cc__link" href="${p}/#contact">contact me</a>.`,
                 },
               ],
             },

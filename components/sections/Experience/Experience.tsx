@@ -1,5 +1,6 @@
 'use client';
 
+import { Link } from '@/i18n/navigation';
 import { getEducation, getExperience } from '@/lib/content';
 import styles from './Experience.module.scss';
 import { useAppLocale, useT } from '@/lib/i18n/dictionary';
@@ -94,14 +95,22 @@ export default function Experience() {
                 ))}
               </ul>
 
-              <a
-                href="https://ingala.earth"
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles.projLink}
-              >
-                {t.experience.projLink}
-              </a>
+              <div className={styles.projLinks}>
+                <Link
+                  href="/case-studies/ingalaearth"
+                  className={styles.projCaseLink}
+                >
+                  {t.experience.projCase}
+                </Link>
+                <a
+                  href="https://ingala.earth"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.projLink}
+                >
+                  {t.experience.projLink}
+                </a>
+              </div>
             </div>
 
             <div className={styles.projSide}>

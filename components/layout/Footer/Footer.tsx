@@ -1,6 +1,6 @@
 'use client';
 
-import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
 import styles from './Footer.module.scss';
 import { useT } from '@/lib/i18n/dictionary';
 

@@ -132,17 +132,17 @@ const en = {
     projCase: 'Read the case study →',
     projSideSub: 'Regeneration & Resilience',
     training: [
-      { when: 'Feb–Jul 2025', what: 'BSK B2 German', where: 'GFBM Berlin' },
-      {
-        when: 'Apr–Jul 2026',
-        what: 'C1 German course',
-        where: 'die deutSCHule',
-      },
       {
         when: 'Apr–Jul 2026',
         what: 'Product Management & Product Owner Training',
         where:
-          'Digitale Leute School · Discovery, MVP scoping, agile delivery, stakeholder communication and product metrics',
+          'Digitale Leute School, Cologne · Remote\nDiscovery · MVP scoping · Agile delivery · Stakeholder communication · Product metrics',
+      },
+      { when: 'Feb–Jul 2025', what: 'BSK B2 German', where: 'GFBM, Berlin' },
+      {
+        when: 'Apr–Jul 2026',
+        what: 'C1 German course',
+        where: 'die deutSCHule, Berlin',
       },
     ],
   },
@@ -303,17 +303,17 @@ const de: Dict = {
     projCase: 'Case Study lesen →',
     projSideSub: 'Regeneration & Resilienz',
     training: [
-      { when: 'Feb–Jul 2025', what: 'BSK B2 Deutsch', where: 'GFBM Berlin' },
-      {
-        when: 'Apr–Jul 2026',
-        what: 'C1-Deutschkurs',
-        where: 'die deutSCHule',
-      },
       {
         when: 'Apr–Jul 2026',
         what: 'Product Management & Product Owner Weiterbildung',
         where:
-          'Digitale Leute School · Discovery, MVP-Scoping, agile Delivery, Stakeholder-Kommunikation und Produktmetriken',
+          'Digitale Leute School, Köln · Remote\nDiscovery · MVP-Scoping · Agile Delivery · Stakeholder-Kommunikation · Produktmetriken',
+      },
+      { when: 'Feb–Jul 2025', what: 'BSK B2 Deutsch', where: 'GFBM, Berlin' },
+      {
+        when: 'Apr–Jul 2026',
+        what: 'C1-Deutschkurs',
+        where: 'die deutSCHule, Berlin',
       },
     ],
   },

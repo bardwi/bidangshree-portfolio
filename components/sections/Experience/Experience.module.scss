@@ -299,7 +299,7 @@
     box-shadow: 0 12px 30px rgba(40, 30, 15, 0.06);
   }
 
-  span {
+  > span {
     display: block;
     font-size: 0.72rem;
     font-weight: 700;
@@ -323,12 +323,36 @@
     color: var(--ink-soft);
     font-size: 0.88rem;
     line-height: 1.55;
+    white-space: pre-line;
+  }
+}
+
+.trainingProvider {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.featuredTraining {
+  grid-column: span 2;
+  background: linear-gradient(135deg, rgba(49, 92, 84, 0.08), var(--card));
+  border-color: rgba(49, 92, 84, 0.28);
+
+  span {
+    color: var(--green);
+  }
+
+  strong {
+    font-size: 1.12rem;
   }
 }
 
 @media (max-width: 900px) {
   .trainingGrid {
     grid-template-columns: 1fr;
+  }
+
+  .featuredTraining {
+    grid-column: auto;
   }
 }
 

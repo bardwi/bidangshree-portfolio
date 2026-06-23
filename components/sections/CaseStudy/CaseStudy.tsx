@@ -1,7 +1,6 @@
 'use client';
 
-import Link from 'next/link';
-//import { Link } from '@/i18n/navigation';
+import { Link } from '@/i18n/navigation';
 import { FiFileText } from 'react-icons/fi';
 import styles from './CaseStudy.module.scss';
 import { useT } from '@/lib/i18n/dictionary';

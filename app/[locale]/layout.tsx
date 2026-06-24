@@ -76,9 +76,9 @@ export async function generateMetadata({
     //   images: ['/portrait.jpg'],
     // },
     icons: {
-      icon: [{ url: '/icons/icon-32.png', sizes: '32x32' }],
-      shortcut: '/icons/favicon.ico',
-      apple: '/icons/apple-icon.png',
+      icon: [{ url: '/favicon.ico', sizes: '32x32' }],
+      shortcut: '/favicon.ico',
+      apple: '/apple-icon.png',
     },
   };
 }
@@ -97,7 +97,11 @@ export default async function LocaleLayout({
   setRequestLocale(locale);
 
   return (
-    <html lang={locale} className={`${fraunces.variable} ${jakarta.variable}`}>
+    <html
+      lang={locale}
+      className={`${fraunces.variable} ${jakarta.variable}`}
+      data-scroll-behavior="smooth"
+    >
       <body>
         <NextIntlClientProvider>
           <Header />

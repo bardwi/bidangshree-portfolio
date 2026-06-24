@@ -7,7 +7,7 @@ const en = {
     items: [
       { label: 'About', href: '/#about' },
       { label: 'Case Study', href: '/#linguahub' },
-      { label: 'Bootcamp', href: '/#bootcamp' },
+      { label: 'Professional Training', href: '/#bootcamp' },
       { label: 'Experience', href: '/#experience' },
       { label: 'Skills', href: '/#skills' },
     ],
@@ -28,7 +28,7 @@ const en = {
     featurePre: 'Featured case study:',
     featurePost: ' LinguaHub - from user research to MVP prototype.',
     factExp: 'frontend & UX delivery',
-    factBootcamp: 'Bootcamp · 2026',
+    factBootcamp: 'Professional training · 2026',
     factCase: 'end-to-end case study',
   },
 
@@ -36,16 +36,16 @@ const en = {
     eyebrow: 'About',
     titlePre: 'Product decisions shaped by UX, users, and ',
     titleAccent: 'technical feasibility.',
-    p1Pre: 'I focus on the space where ',
+    p1Pre: 'I work at the intersection of ',
     p1Bold: 'user experience, product value, and technical feasibility',
     p1Post:
-      ' meet. For seven years, I built user-facing products as a frontend engineer. That experience shaped how I think about product: clear flows, realistic scope, accessible interfaces, and requirements teams can actually build.',
-    p2: 'My product work starts with user needs: what are people trying to do, where do they get stuck, and what can we simplify? From there, I translate insights into MVP scope, prioritized backlogs, user stories, acceptance criteria, and prototypes that help teams and stakeholders make clearer decisions.',
+      '. Through seven years of frontend development, I learned to look beyond the interface and think about what is clear for users and realistic for teams to build.',
+    p2: 'I am especially interested in how unclear requirements become clear product decisions: what people really need, where they lose time, and what can be made simpler. From there, I translate insights into MVP scope, prioritized backlogs, user stories, acceptance criteria, and prototypes that help teams and stakeholders make clearer decisions.',
     p3Pre:
-      'I am currently completing a PM/PO training and applying the methods through ',
+      'I am currently completing a PM/PO professional training program and applying the methods through ',
     p3Bold: 'LinguaHub',
     p3Post:
-      ', an end-to-end EdTech case study covering user research, UX structure, MVP scoping, release planning, KPIs, and a clickable prototype.',
+      ', an end-to-end case study with user research, UX structure, MVP scoping, release planning, KPIs, and a clickable prototype.',
     pillars: [
       {
         title: 'User needs & UX discovery',
@@ -64,7 +64,7 @@ const en = {
 
   caseStudy: {
     eyebrow: 'Featured Case Study',
-    title: 'Designing a focused MVP from real learner and teacher needs.',
+    title: 'Designing an MVP around real learner and teacher needs.',
     tag: 'UX-focused Product Management · EdTech · MVP',
     sub: 'A central class material hub for adult German learners and teachers - designed around one UX goal: helping learners find lessons, homework, and course materials in one organized place.',
     snapshot: {
@@ -180,7 +180,7 @@ const de: Dict = {
     items: [
       { label: 'Über mich', href: '/#about' },
       { label: 'Case Study', href: '/#linguahub' },
-      { label: 'Bootcamp', href: '/#bootcamp' },
+      { label: 'Weiterbildung', href: '/#bootcamp' },
       { label: 'Erfahrung', href: '/#experience' },
       { label: 'Skills', href: '/#skills' },
     ],
@@ -201,7 +201,7 @@ const de: Dict = {
     featurePre: 'Ausgewählte Case Study:',
     featurePost: ' LinguaHub - von der User Research zum MVP-Prototyp.',
     factExp: 'Frontend- & UX-Umsetzung',
-    factBootcamp: 'Bootcamp · 2026',
+    factBootcamp: 'Weiterbildung · 2026',
     factCase: 'End-to-End Case Study',
   },
 
@@ -212,13 +212,13 @@ const de: Dict = {
     p1Pre: 'Ich arbeite an der Schnittstelle, an der ',
     p1Bold: 'User Experience, Produktwert und technische Machbarkeit',
     p1Post:
-      ' zusammenkommen. Sieben Jahre lang habe ich als Frontend-Entwicklerin nutzerorientierte Produkte gebaut. Diese Erfahrung prägt mein Produktdenken: klare Flows, realistischer Scope, barrierefreie Interfaces und Anforderungen, die Teams tatsächlich umsetzen können.',
-    p2: 'Meine Produktarbeit beginnt bei den Nutzerbedürfnissen: Was wollen Menschen erreichen, wo bleiben sie hängen und was lässt sich vereinfachen? Daraus leite ich MVP-Scope, priorisierte Backlogs, User Stories, Akzeptanzkriterien und Prototypen ab, die Teams und Stakeholdern klarere Entscheidungen ermöglichen.',
+      ' zusammenkommen. Durch sieben Jahre Frontend-Entwicklung habe ich gelernt, nicht nur auf die Oberfläche zu schauen, sondern auch darauf, was für Nutzer:innen verständlich ist und für Teams realistisch umsetzbar bleibt.',
+    p2: 'Mich interessiert besonders, wie aus unklaren Anforderungen klare Produktentscheidungen entstehen: Was brauchen Menschen wirklich, wo verlieren sie Zeit, und was lässt sich einfacher machen? Daraus leite ich MVP-Scope, priorisierte Backlogs, User Stories, Akzeptanzkriterien und Prototypen ab, die Teams und Stakeholdern klarere Entscheidungen ermöglichen.',
     p3Pre:
       'Aktuell absolviere ich eine PM/PO-Weiterbildung und wende die Methoden in ',
     p3Bold: 'LinguaHub',
     p3Post:
-      ' an, einer End-to-End-EdTech-Case-Study mit User Research, UX-Struktur, MVP-Scoping, Release-Planung, KPIs und einem klickbaren Prototyp.',
+      ' an, einer End-to-End-Case-Study mit User Research, UX-Struktur, MVP-Scoping, Release-Planung, KPIs und einem klickbaren Prototyp.',
     pillars: [
       {
         title: 'Nutzerbedürfnisse & UX-Discovery',
@@ -237,8 +237,7 @@ const de: Dict = {
 
   caseStudy: {
     eyebrow: 'Ausgewählte Case Study',
-    title:
-      'Ein fokussiertes MVP aus echten Bedürfnissen von Lernenden und Lehrkräften.',
+    title: 'Ein MVP auf Basis echter Bedürfnisse von Lernenden und Lehrkräften.',
     tag: 'UX-fokussiertes Product Management · EdTech · MVP',
     sub: 'Ein zentraler Kursmaterial-Hub für erwachsene Deutschlernende und Lehrkräfte - gestaltet um ein UX-Ziel: Lernende finden Lektionen, Hausaufgaben und Kursmaterialien an einem organisierten Ort.',
     snapshot: {

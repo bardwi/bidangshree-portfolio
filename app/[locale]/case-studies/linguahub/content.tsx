@@ -182,7 +182,7 @@ const en: CaseStudyContent = {
     heroLeadEm: 'organized',
     heroLeadPost: ' place.',
     heroText:
-      'Based on scattered PDFs, links, notes and course information, I shaped a focused MVP concept: LinguaHub gives learners orientation and teachers a simple publishing flow.',
+      'Based on scattered PDFs, links, notes and course information, I shaped a clearly scoped MVP concept: LinguaHub gives learners orientation and teachers a simple publishing flow.',
     phoneCaptions: {
       homeTitle: 'Course home',
       homeText: " - today's lesson and material first",
@@ -311,8 +311,8 @@ const en: CaseStudyContent = {
       label: 'Final outcome',
       h2: 'What started as a material organization idea became a focused course hub for German learners and teachers.',
       text: 'Through user interviews, story mapping, reframing and MVP prioritization, I shaped a focused product concept: learners find content faster, while teachers keep control over drafts and publication.',
-      stats: ['5', '2', '1'],
-      statLabels: ['user interviews', 'core flows', 'focused MVP'],
+      stats: ['5', '2', 'MVP'],
+      statLabels: ['user interviews', 'core flows', 'clear scope'],
     },
   },
   heroFacts: [
@@ -657,7 +657,7 @@ const en: CaseStudyContent = {
     ['4', 'student interviews'],
     ['1', 'teacher interview'],
     ['2', 'core flows'],
-    ['1', 'focused MVP'],
+    ['MVP', 'clear scope'],
   ],
 };
 
@@ -679,7 +679,7 @@ const de: CaseStudyContent = {
     heroLeadEm: 'organisierten',
     heroLeadPost: ' Ort zu finden.',
     heroText:
-      'Ausgehend von verstreuten PDFs, Links, Notizen und Kursinformationen habe ich ein fokussiertes MVP-Konzept entwickelt: LinguaHub gibt Lernenden Orientierung und Lehrkräften einen einfachen Veröffentlichungs-Flow.',
+      'Ausgehend von verstreuten PDFs, Links, Notizen und Kursinformationen habe ich ein klar abgegrenztes MVP-Konzept entwickelt: LinguaHub gibt Lernenden Orientierung und Lehrkräften einen einfachen Veröffentlichungs-Flow.',
     phoneCaptions: {
       homeTitle: 'Kurs-Home',
       homeText: ' - heutige Lektion und Material zuerst',
@@ -809,8 +809,8 @@ const de: CaseStudyContent = {
       label: 'Endergebnis',
       h2: 'Aus einer Idee zur Materialorganisation wurde ein fokussierter Kurs-Hub für Deutschlernende und Lehrkräfte.',
       text: 'Durch User-Interviews, Story Mapping, Reframing und MVP-Priorisierung habe ich ein fokussiertes Produktkonzept geformt: Lernende finden Inhalte schneller, während Lehrkräfte die Kontrolle über Entwürfe und Veröffentlichung behalten.',
-      stats: ['5', '2', '1'],
-      statLabels: ['User-Interviews', 'Core Flows', 'fokussiertes MVP'],
+      stats: ['5', '2', 'MVP'],
+      statLabels: ['User-Interviews', 'Core Flows', 'klarer Scope'],
     },
   },
   heroFacts: [
@@ -1159,7 +1159,7 @@ const de: CaseStudyContent = {
     ['4', 'Lernenden-Interviews'],
     ['1', 'Lehrkraft-Interview'],
     ['2', 'Core Flows'],
-    ['1', 'fokussiertes MVP'],
+    ['MVP', 'klarer Scope'],
   ],
 };
 

@@ -77,7 +77,7 @@ export default function Hero() {
             </div>
 
             <div className={styles.fact}>
-              <div className={styles.n}>1</div>
+              <div className={styles.n}>Full</div>
               <div className={styles.l}>{t.hero.factCase}</div>
             </div>
           </div>

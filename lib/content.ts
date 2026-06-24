@@ -13,7 +13,7 @@ const experienceByLocale: Record<Locale, Experience[]> = {
     {
       loc: 'Berlin, Germany',
       date: 'Jan 2023 – Dec 2024',
-      company: 'TIME for Kids',
+      company: 'TIME for kids Informationstechnologien GmbH',
       tag: 'Frontend Software Developer',
       bullets: [
         'Combined frontend development with product ownership tasks for internal education-sector applications.',
@@ -55,7 +55,7 @@ const experienceByLocale: Record<Locale, Experience[]> = {
     {
       loc: 'Berlin, Deutschland',
       date: 'Jan 2023 – Dez 2024',
-      company: 'TIME for Kids',
+      company: 'TIME for kids Informationstechnologien GmbH',
       tag: 'Frontend-Softwareentwicklerin',
       bullets: [
         'Frontend-Entwicklung mit Product-Ownership-Aufgaben für interne Anwendungen im Bildungsbereich kombiniert.',

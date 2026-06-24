@@ -22,7 +22,7 @@ const en = {
     titlePre: 'Translating user needs into ',
     titleEm: 'buildable ',
     titlePost: 'products.',
-    lede: 'Product Owner / Product Manager in Berlin with a frontend background and a strong focus on UX/UI. I care about turning research and messy requirements into clear product decisions - and shaping ideas that are easy for users to understand and realistic for teams to build.',
+    lede: 'Product Owner / Product Manager in Berlin with a frontend background and a strong focus on UX/UI. I care about turning user research and unclear requirements into clear product decisions - and shaping ideas that are easy for users to understand and realistic for teams to build.',
     ctaPrimary: 'View LinguaHub case study',
     ctaSecondary: 'Get in touch',
     featurePre: 'Featured case study:',
@@ -40,16 +40,16 @@ const en = {
     p1Bold: 'user experience, product value, and technical feasibility',
     p1Post:
       '. Through seven years of frontend development, I learned to look beyond the interface and focus on the decisions behind it: what do people really need, what is clear, and what can realistically be built by the team?',
-    p2: 'I like listening closely, asking questions, and bringing structure to unclear requirements. I am interested in where people lose time in everyday workflows, where processes become unnecessarily complex, and how that can turn into clear next steps. From there, I translate insights into MVP scope, prioritized backlogs, user stories, acceptance criteria, and prototypes that help teams and stakeholders make better decisions.',
+    p2: 'I like listening closely, asking questions, and bringing structure to unclear requirements. From there, I translate insights into MVP scope, prioritized backlogs, user stories, acceptance criteria, and prototypes that help teams and stakeholders make better decisions.',
     p3Pre:
       'I am currently completing a PM/PO professional training program and applying the methods through ',
     p3Bold: 'LinguaHub',
     p3Post:
-      ', an end-to-end case study with user research, UX structure, MVP scoping, release planning, KPIs, and a clickable prototype.',
+      ', an end-to-end case study with user research, UX structure, MVP scoping, and a clickable prototype.',
     pillars: [
       {
         title: 'User needs & UX discovery',
-        text: 'Understanding pain points, mapping journeys, and turning user needs into focused product decisions.',
+        text: 'Understanding pain points, mapping journeys, and turning user needs into clear product decisions.',
       },
       {
         title: 'MVP scoping & backlog focus',
@@ -65,7 +65,7 @@ const en = {
   caseStudy: {
     eyebrow: 'Featured Case Study',
     title: 'Designing an MVP around real learner and teacher needs.',
-    tag: 'UX-focused Product Management · EdTech · MVP',
+    tag: 'UX-focused Product Management · MVP',
     sub: 'A central class material hub for adult German learners and teachers - designed around one UX goal: helping learners find lessons, homework, and course materials in one organized place.',
     snapshot: {
       problemLabel: 'Problem',
@@ -87,7 +87,7 @@ const en = {
     eyebrow: 'Professional Training · 2026',
     title: 'Product Management & Product Owner Training',
     meta: 'Digitale Leute School · Remote · Apr–Jul 2026',
-    body: 'Product Management and Product Owner training focused on product discovery, UX strategy, MVP scoping, agile delivery, stakeholder communication, and product metrics. I applied these methods through LinguaHub, a UX-focused EdTech case study with research, user flows, backlog structure, release planning, KPIs, and a clickable prototype.',
+    body: 'Product Management and Product Owner training focused on product discovery, UX strategy, MVP scoping, agile delivery, stakeholder communication, and product metrics. I applied these methods through LinguaHub, a UX-focused case study with research, user flows, backlog structure, release planning, KPIs, and a clickable prototype.',
     facts: [
       { number: 'Discovery', label: 'user research & problem framing' },
       { number: 'MVP', label: 'scope, backlog & release planning' },
@@ -195,7 +195,7 @@ const de: Dict = {
     titlePre: 'Ich übersetze Nutzerbedürfnisse in ',
     titleEm: 'umsetzbare ',
     titlePost: 'Produkte.',
-    lede: 'Product Owner / Product Manager in Berlin mit Frontend-Hintergrund und starkem Fokus auf UX/UI. Mir ist wichtig, aus Research und unklaren Anforderungen klare Produktentscheidungen zu machen - und Ideen so zu gestalten, dass sie für Nutzer:innen verständlich und für Teams realistisch umsetzbar bleiben.',
+    lede: 'Product Owner / Product Manager in Berlin mit Frontend-Hintergrund und starkem Fokus auf UX/UI. Mir ist wichtig, Research-Erkenntnisse und unklare Anforderungen in klare Produktentscheidungen zu übersetzen - damit Ideen für Nutzer:innen verständlich und für Teams realistisch umsetzbar bleiben.',
     ctaPrimary: 'LinguaHub Case Study ansehen',
     ctaSecondary: 'Kontakt aufnehmen',
     featurePre: 'Ausgewählte Case Study:',
@@ -207,30 +207,30 @@ const de: Dict = {
 
   about: {
     eyebrow: 'Über mich',
-    titlePre: 'Produktentscheidungen, geprägt von UX, Nutzer:innen und ',
+    titlePre: 'Produktentscheidungen mit Blick auf UX, Nutzer:innen und ',
     titleAccent: 'technischer Machbarkeit.',
-    p1Pre: 'Ich arbeite an der Schnittstelle, an der ',
-    p1Bold: 'User Experience, Produktwert und technische Machbarkeit',
+    p1Pre: 'Ich arbeite an der Schnittstelle von ',
+    p1Bold: 'User Experience, Produktwert und technischer Machbarkeit',
     p1Post:
-      ' zusammenkommen. Durch sieben Jahre Frontend-Entwicklung habe ich gelernt, nicht nur auf die Oberfläche zu schauen, sondern auf die Entscheidungen dahinter: Was brauchen Menschen wirklich, was ist verständlich und was lässt sich im Team realistisch umsetzen?',
-    p2: 'Ich höre gerne genau hin, frage nach und bringe Ordnung in unklare Anforderungen. Mich interessiert, wo Menschen im Alltag Zeit verlieren, wo Prozesse unnötig kompliziert werden und wie daraus klare nächste Schritte entstehen. Daraus leite ich MVP-Scope, priorisierte Backlogs, User Stories, Akzeptanzkriterien und Prototypen ab, die Teams und Stakeholdern bessere Entscheidungen ermöglichen.',
+      '. Durch sieben Jahre Frontend-Entwicklung habe ich gelernt, Produkte nicht nur aus der Oberfläche zu denken, sondern aus den Entscheidungen dahinter: Was brauchen Menschen wirklich, was ist verständlich und was lässt sich im Team realistisch umsetzen?',
+    p2: 'Ich höre genau hin, frage nach und bringe Ordnung in unklare Anforderungen. Daraus entstehen MVP-Scopes, priorisierte Backlogs, User Stories, Akzeptanzkriterien und Prototypen, die Teams und Stakeholdern bessere Entscheidungen ermöglichen.',
     p3Pre:
       'Aktuell absolviere ich eine PM/PO-Weiterbildung und wende die Methoden in ',
     p3Bold: 'LinguaHub',
     p3Post:
-      ' an, einer End-to-End-Case-Study mit User Research, UX-Struktur, MVP-Scoping, Release-Planung, KPIs und einem klickbaren Prototyp.',
+      ' an, einer End-to-End-Case-Study mit User Research, UX-Struktur, MVP-Scoping und einem klickbaren Prototyp.',
     pillars: [
       {
         title: 'Nutzerbedürfnisse & UX-Discovery',
-        text: 'Pain Points verstehen, Journeys mappen und Nutzerbedürfnisse in fokussierte Produktentscheidungen übersetzen.',
+        text: 'Pain Points verstehen, Journeys mappen und Nutzerbedürfnisse in klare Produktentscheidungen übersetzen.',
       },
       {
         title: 'MVP-Scoping & Backlog-Fokus',
-        text: 'Zuerst priorisieren, was Nutzerwert schafft - und es dann in klare Stories, Releases und Akzeptanzkriterien übersetzen.',
+        text: 'Priorisieren, was echten Nutzerwert schafft - und daraus klare Stories, Releases und Akzeptanzkriterien ableiten.',
       },
       {
         title: 'UX/UI-Prototyping & Delivery',
-        text: 'Praxisnahe Prototypen, Flows und Specs erstellen, die Teams vor dem Bauen ausrichten und das Delivery-Risiko senken.',
+        text: 'Praxisnahe Prototypen, Flows und Specs erstellen, damit Teams vor dem Bauen ein gemeinsames Verständnis haben und Delivery-Risiken sinken.',
       },
     ],
   },
@@ -238,8 +238,8 @@ const de: Dict = {
   caseStudy: {
     eyebrow: 'Ausgewählte Case Study',
     title: 'Ein MVP auf Basis echter Bedürfnisse von Lernenden und Lehrkräften.',
-    tag: 'UX-fokussiertes Product Management · EdTech · MVP',
-    sub: 'Ein zentraler Kursmaterial-Hub für erwachsene Deutschlernende und Lehrkräfte - gestaltet um ein UX-Ziel: Lernende finden Lektionen, Hausaufgaben und Kursmaterialien an einem organisierten Ort.',
+    tag: 'UX-fokussiertes Product Management · MVP',
+    sub: 'Ein zentraler Kursmaterial-Hub für erwachsene Deutschlernende und Lehrkräfte - entwickelt mit einem klaren UX-Ziel: Lernende finden Lektionen, Hausaufgaben und Kursmaterialien an einem organisierten Ort.',
     snapshot: {
       problemLabel: 'Problem',
       problemText:
@@ -251,7 +251,7 @@ const de: Dict = {
         'User Research, UX-Discovery, User Flows, MVP-Scoping, Backlog, Prototyp und Validierungsplan.',
       outcomeLabel: 'Ergebnis',
       outcomeText:
-        'Ein MVP-Plan über zwei Releases mit klarer UX-Struktur und klickbarem Prototyp.',
+        'Ein MVP-Plan für zwei Releases mit klarer UX-Struktur und klickbarem Prototyp.',
     },
     cta: 'Vollständige Case Study lesen',
   },
@@ -260,7 +260,7 @@ const de: Dict = {
     eyebrow: 'Weiterbildung · 2026',
     title: 'Product Management & Product Owner Weiterbildung',
     meta: 'Digitale Leute School · Remote · Apr–Jul 2026',
-    body: 'Product-Management- und Product-Owner-Weiterbildung mit Fokus auf Product Discovery, UX-Strategie, MVP-Scoping, agile Delivery, Stakeholder-Kommunikation und Produktmetriken. Ich habe diese Methoden in LinguaHub angewandt, einer UX-fokussierten EdTech-Case-Study mit Research, User Flows, Backlog-Struktur, Release-Planung, KPIs und klickbarem Prototyp.',
+    body: 'Product-Management- und Product-Owner-Weiterbildung mit Fokus auf Product Discovery, UX-Strategie, MVP-Scoping, agile Delivery, Stakeholder-Kommunikation und Produktmetriken. Ich habe diese Methoden in LinguaHub angewandt, einer UX-fokussierten Case Study mit Research, User Flows, Backlog-Struktur, Release-Planung, KPIs und klickbarem Prototyp.',
     facts: [
       { number: 'Discovery', label: 'User Research & Problem Framing' },
       { number: 'MVP', label: 'Scope, Backlog & Release-Planung' },

@@ -10,7 +10,7 @@ Live site: www.bbrahma.de⁠￼
 
 - Product thinking shaped by user needs, UX structure, and technical feasibility
 - A bilingual experience in German and English
-- A featured EdTech case study: LinguaHub
+- A featured product case study: LinguaHub
 - Research, story mapping, MVP prioritization, release planning, KPIs, and prototype flows
 - Frontend craft through responsive UI, SCSS modules, accessible page structure, and localized metadata
 - Practical legal and trust details including imprint, privacy page, and cookie consent

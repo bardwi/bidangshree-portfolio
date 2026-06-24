@@ -31,11 +31,13 @@ export default function About() {
 
             <p>{t.about.p2}</p>
 
-            <p>
-              {t.about.p3Pre}
-              <b>{t.about.p3Bold}</b>
-              {t.about.p3Post}
-            </p>
+            {(t.about.p3Pre || t.about.p3Bold || t.about.p3Post) && (
+              <p>
+                {t.about.p3Pre}
+                <b>{t.about.p3Bold}</b>
+                {t.about.p3Post}
+              </p>
+            )}
           </div>
 
           <div className={`${styles.pillars} ${styles.rise}`}>

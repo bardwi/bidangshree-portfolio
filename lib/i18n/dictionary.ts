@@ -22,7 +22,7 @@ const en = {
     titlePre: 'Translating user needs into ',
     titleEm: 'buildable ',
     titlePost: 'products.',
-    lede: 'Product Owner / Product Manager in Berlin with a frontend background and a strong focus on UX/UI. I turn insights into clear MVP scopes, prioritized backlogs, and practical prototypes teams can build.',
+    lede: 'Product Owner / Product Manager in Berlin with a frontend background and a strong focus on UX/UI. I care about turning research and messy requirements into clear product decisions - and shaping ideas that are easy for users to understand and realistic for teams to build.',
     ctaPrimary: 'View LinguaHub case study',
     ctaSecondary: 'Get in touch',
     featurePre: 'Featured case study:',
@@ -39,8 +39,8 @@ const en = {
     p1Pre: 'I work at the intersection of ',
     p1Bold: 'user experience, product value, and technical feasibility',
     p1Post:
-      '. Through seven years of frontend development, I learned to look beyond the interface and think about what is clear for users and realistic for teams to build.',
-    p2: 'I am especially interested in how unclear requirements become clear product decisions: what people really need, where they lose time, and what can be made simpler. From there, I translate insights into MVP scope, prioritized backlogs, user stories, acceptance criteria, and prototypes that help teams and stakeholders make clearer decisions.',
+      '. Through seven years of frontend development, I learned to look beyond the interface and focus on the decisions behind it: what do people really need, what is clear, and what can realistically be built by the team?',
+    p2: 'I like listening closely, asking questions, and bringing structure to unclear requirements. I am interested in where people lose time in everyday workflows, where processes become unnecessarily complex, and how that can turn into clear next steps. From there, I translate insights into MVP scope, prioritized backlogs, user stories, acceptance criteria, and prototypes that help teams and stakeholders make better decisions.',
     p3Pre:
       'I am currently completing a PM/PO professional training program and applying the methods through ',
     p3Bold: 'LinguaHub',
@@ -195,7 +195,7 @@ const de: Dict = {
     titlePre: 'Ich übersetze Nutzerbedürfnisse in ',
     titleEm: 'umsetzbare ',
     titlePost: 'Produkte.',
-    lede: 'Product Owner / Product Manager in Berlin mit Frontend-Hintergrund und starkem Fokus auf UX/UI. Ich verwandle Erkenntnisse in klare MVP-Scopes, priorisierte Backlogs und praxisnahe Prototypen, die Teams umsetzen können.',
+    lede: 'Product Owner / Product Manager in Berlin mit Frontend-Hintergrund und starkem Fokus auf UX/UI. Mir ist wichtig, aus Research und unklaren Anforderungen klare Produktentscheidungen zu machen - und Ideen so zu gestalten, dass sie für Nutzer:innen verständlich und für Teams realistisch umsetzbar bleiben.',
     ctaPrimary: 'LinguaHub Case Study ansehen',
     ctaSecondary: 'Kontakt aufnehmen',
     featurePre: 'Ausgewählte Case Study:',
@@ -212,8 +212,8 @@ const de: Dict = {
     p1Pre: 'Ich arbeite an der Schnittstelle, an der ',
     p1Bold: 'User Experience, Produktwert und technische Machbarkeit',
     p1Post:
-      ' zusammenkommen. Durch sieben Jahre Frontend-Entwicklung habe ich gelernt, nicht nur auf die Oberfläche zu schauen, sondern auch darauf, was für Nutzer:innen verständlich ist und für Teams realistisch umsetzbar bleibt.',
-    p2: 'Mich interessiert besonders, wie aus unklaren Anforderungen klare Produktentscheidungen entstehen: Was brauchen Menschen wirklich, wo verlieren sie Zeit, und was lässt sich einfacher machen? Daraus leite ich MVP-Scope, priorisierte Backlogs, User Stories, Akzeptanzkriterien und Prototypen ab, die Teams und Stakeholdern klarere Entscheidungen ermöglichen.',
+      ' zusammenkommen. Durch sieben Jahre Frontend-Entwicklung habe ich gelernt, nicht nur auf die Oberfläche zu schauen, sondern auf die Entscheidungen dahinter: Was brauchen Menschen wirklich, was ist verständlich und was lässt sich im Team realistisch umsetzen?',
+    p2: 'Ich höre gerne genau hin, frage nach und bringe Ordnung in unklare Anforderungen. Mich interessiert, wo Menschen im Alltag Zeit verlieren, wo Prozesse unnötig kompliziert werden und wie daraus klare nächste Schritte entstehen. Daraus leite ich MVP-Scope, priorisierte Backlogs, User Stories, Akzeptanzkriterien und Prototypen ab, die Teams und Stakeholdern bessere Entscheidungen ermöglichen.',
     p3Pre:
       'Aktuell absolviere ich eine PM/PO-Weiterbildung und wende die Methoden in ',
     p3Bold: 'LinguaHub',

@@ -23,6 +23,7 @@ The site presents professional experience, product skills, training, contact opt
 - react-icons for interface icons
 - vanilla-cookieconsent for cookie preferences
 - Vercel Analytics
+- Google Analytics 4 via the Google tag (`gtag.js`)
 - Vitest and Testing Library for tests
 - ESLint for code quality
 

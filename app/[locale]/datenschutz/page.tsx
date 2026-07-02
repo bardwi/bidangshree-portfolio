@@ -36,7 +36,7 @@ const t = {
       'This website is hosted by Vercel Inc. When you visit this website, the hosting provider may process technical connection data, including IP address, date and time of access, requested files, referrer URL, browser type, operating system, and server log files. This processing is based on my legitimate interest in providing a secure, reliable, and fast website under Art. 6(1)(f) GDPR.',
     contactH: '3. Contact by email',
     contactP1:
-      'If you contact me by email, I process the data you provide, such as your name, email address, and message, in order to respond to your enquiry. The legal basis is Art. 6(1)(b) GDPR if the contact relates to a possible contractual or professional relationship, and Art. 6(1)(f) GDPR based on my legitimate interest in responding to enquiries.',
+      'If you contact me by email or through the contact form, I process the data you provide, such as your name, email address, company, subject, and message, in order to respond to your enquiry. Messages submitted through the contact form are sent using Resend as the contact form email delivery provider. The legal basis is Art. 6(1)(b) GDPR if the contact relates to a possible contractual or professional relationship, and Art. 6(1)(f) GDPR based on my legitimate interest in responding to enquiries.',
     contactP2:
       'Your email and message are stored only as long as necessary to process your enquiry, unless legal retention obligations require a longer storage period.',
     fontsH: '4. Fonts',
@@ -55,16 +55,16 @@ const t = {
     cookiePost: ' on this website.',
     analyticsH: '7. Analytics',
     analyticsP1:
-      'This website uses Vercel Web Analytics, a privacy-friendly analytics service provided by Vercel Inc. Analytics help me understand general website usage, such as page views, referrers, device information, and approximate location data.',
+      'This website uses Vercel Web Analytics, a privacy-friendly analytics service provided by Vercel Inc., and Google Analytics, a web analytics service provided by Google Ireland Limited / Google LLC. Analytics help me understand general website usage.',
     analyticsP2:
-      'According to Vercel, Web Analytics does not use third-party cookies. Vercel stores anonymized data and identifies visitors through a hash created from the incoming request. The visitor session is automatically discarded after 24 hours.',
+      'According to Vercel, Web Analytics does not use third-party cookies. Google Analytics may set analytics cookies such as _ga and process usage data for measurement and reporting. Data may be transferred to Google servers outside the EU.',
     analyticsP3:
-      'Vercel Web Analytics is only activated after you give consent through the cookie banner. The legal basis for this processing is your consent under Art. 6(1)(a) GDPR. You may withdraw your consent at any time.',
+      'Optional analytics are only activated after you give consent through the cookie banner. The legal basis for this processing is your consent under Art. 6(1)(a) GDPR. You may withdraw your consent at any time.',
     rightsH: '8. Your rights',
     rightsP1:
       'Under the GDPR, you have the right to access, rectify, erase, restrict, and port your personal data. You also have the right to object to processing based on legitimate interests. If processing is based on consent, you may withdraw that consent at any time.',
     rightsP2:
-      'You also have the right to lodge a complaint with a data protection supervisory authority. In Berlin, the competent authority is the Berlin Commissioner for Data Protection and Freedom of Information.',
+      'You also have the right to lodge a complaint with a data protection supervisory authority. The competent authority in Berlin is the Berlin Commissioner for Data Protection and Freedom of Information.',
     contactPrivH: '9. Privacy contact',
     contactPrivPre: 'For any privacy request, please email ',
     contactPrivPost: '.',
@@ -83,7 +83,7 @@ const t = {
       'Diese Website wird von Vercel Inc. gehostet. Beim Besuch dieser Website kann der Hosting-Anbieter technische Verbindungsdaten verarbeiten, darunter IP-Adresse, Datum und Uhrzeit des Zugriffs, angeforderte Dateien, Referrer-URL, Browsertyp, Betriebssystem und Server-Logdateien. Diese Verarbeitung erfolgt auf Grundlage meines berechtigten Interesses an einer sicheren, zuverlässigen und schnellen Website gemäß Art. 6 Abs. 1 lit. f DSGVO.',
     contactH: '3. Kontakt per E-Mail',
     contactP1:
-      'Wenn Sie mich per E-Mail kontaktieren, verarbeite ich die von Ihnen angegebenen Daten wie Name, E-Mail-Adresse und Nachricht, um Ihre Anfrage zu beantworten. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO, sofern sich der Kontakt auf ein mögliches vertragliches oder berufliches Verhältnis bezieht, sowie Art. 6 Abs. 1 lit. f DSGVO auf Grundlage meines berechtigten Interesses an der Beantwortung von Anfragen.',
+      'Wenn Sie mich per E-Mail oder über das Kontaktformular kontaktieren, verarbeite ich die von Ihnen angegebenen Daten wie Name, E-Mail-Adresse, Unternehmen, Betreff und Nachricht, um Ihre Anfrage zu beantworten. Nachrichten aus dem Kontaktformular werden mit Resend als Dienstleister für den E-Mail-Versand des Kontaktformulars versendet. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO, sofern sich der Kontakt auf ein mögliches vertragliches oder berufliches Verhältnis bezieht, sowie Art. 6 Abs. 1 lit. f DSGVO auf Grundlage meines berechtigten Interesses an der Beantwortung von Anfragen.',
     contactP2:
       'Ihre E-Mail und Nachricht werden nur so lange gespeichert, wie es zur Bearbeitung Ihrer Anfrage erforderlich ist, sofern keine gesetzlichen Aufbewahrungspflichten eine längere Speicherung verlangen.',
     fontsH: '4. Schriftarten',
@@ -102,16 +102,16 @@ const t = {
     cookiePost: ' auf dieser Website erneut öffnen.',
     analyticsH: '7. Webanalyse',
     analyticsP1:
-      'Diese Website verwendet Vercel Web Analytics, einen datenschutzfreundlichen Analysedienst von Vercel Inc. Die Analyse hilft mir, die allgemeine Nutzung der Website zu verstehen, etwa Seitenaufrufe, Referrer, Geräteinformationen und ungefähre Standortdaten.',
+      'Diese Website verwendet Vercel Web Analytics, einen datenschutzfreundlichen Analysedienst von Vercel Inc., sowie Google Analytics, einen Webanalysedienst von Google Ireland Limited / Google LLC. Die Analyse hilft mir, die allgemeine Nutzung der Website zu verstehen.',
     analyticsP2:
-      'Nach Angaben von Vercel verwendet Web Analytics keine Third-Party-Cookies. Vercel speichert anonymisierte Daten und identifiziert Besucher über einen Hash, der aus der eingehenden Anfrage erzeugt wird. Die Besuchersitzung wird nach 24 Stunden automatisch verworfen.',
+      'Nach Angaben von Vercel verwendet Web Analytics keine Third-Party-Cookies. Google Analytics kann Analyse-Cookies wie _ga setzen und Nutzungsdaten zur Messung und Auswertung verarbeiten. Dabei können Daten an Google-Server außerhalb der EU übertragen werden.',
     analyticsP3:
-      'Vercel Web Analytics wird erst aktiviert, nachdem Sie über das Cookie-Banner eingewilligt haben. Rechtsgrundlage für diese Verarbeitung ist Ihre Einwilligung gemäß Art. 6 Abs. 1 lit. a DSGVO. Sie können Ihre Einwilligung jederzeit widerrufen.',
+      'Optionale Analyse wird erst aktiviert, nachdem Sie über das Cookie-Banner eingewilligt haben. Rechtsgrundlage für diese Verarbeitung ist Ihre Einwilligung gemäß Art. 6 Abs. 1 lit. a DSGVO. Sie können Ihre Einwilligung jederzeit widerrufen.',
     rightsH: '8. Ihre Rechte',
     rightsP1:
       'Nach der DSGVO haben Sie das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung und Übertragbarkeit Ihrer personenbezogenen Daten. Sie haben außerdem das Recht, der Verarbeitung auf Grundlage berechtigter Interessen zu widersprechen. Beruht die Verarbeitung auf einer Einwilligung, können Sie diese jederzeit widerrufen.',
     rightsP2:
-      'Sie haben zudem das Recht, sich bei einer Datenschutz-Aufsichtsbehörde zu beschweren. In Berlin ist die zuständige Behörde die Berliner Beauftragte für Datenschutz und Informationsfreiheit.',
+      'Sie haben außerdem das Recht, sich bei einer Datenschutz-Aufsichtsbehörde zu beschweren. Die zuständige Behörde in Berlin ist die Berliner Beauftragte für Datenschutz und Informationsfreiheit.',
     contactPrivH: '9. Datenschutz-Kontakt',
     contactPrivPre: 'Für Datenschutzanfragen schreiben Sie bitte an ',
     contactPrivPost: '.',

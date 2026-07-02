@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react';
 import { useLocale } from 'next-intl';
 import * as CookieConsent from 'vanilla-cookieconsent';
 import 'vanilla-cookieconsent/dist/cookieconsent.css';
+import GoogleAnalytics from '@/components/GoogleAnalytics/GoogleAnalytics';
 
 export default function CookieConsentBanner() {
   const locale = useLocale();
@@ -104,7 +105,7 @@ export default function CookieConsentBanner() {
                 {
                   title: 'Analytics',
                   description:
-                    'Vercel Web Analytics helps me understand general website usage, such as page views and referrers. It is only activated after you accept analytics.',
+                    'Vercel Web Analytics and Google Analytics help me understand general website usage, such as page views and referrers. They are only activated after you accept analytics.',
                   linkedCategory: 'analytics',
                   cookieTable: {
                     headers: {
@@ -121,6 +122,14 @@ export default function CookieConsentBanner() {
                           'Privacy-friendly, cookie-free analytics for general website usage.',
                         expiration:
                           'No analytics cookies are stored by this website.',
+                      },
+                      {
+                        name: 'Google Analytics',
+                        domain: 'Google Ireland Limited / Google LLC',
+                        description:
+                          'Measures page views and usage patterns after consent.',
+                        expiration:
+                          'May store analytics cookies such as _ga for up to 2 years.',
                       },
                     ],
                   },
@@ -183,7 +192,7 @@ export default function CookieConsentBanner() {
                 {
                   title: 'Analyse',
                   description:
-                    'Vercel Web Analytics hilft mir, die allgemeine Nutzung der Website zu verstehen, etwa Seitenaufrufe und Referrer. Sie wird erst aktiviert, nachdem Sie die Analyse akzeptiert haben.',
+                    'Vercel Web Analytics und Google Analytics helfen mir, die allgemeine Nutzung der Website zu verstehen, etwa Seitenaufrufe und Referrer. Sie werden erst aktiviert, nachdem Sie die Analyse akzeptiert haben.',
                   linkedCategory: 'analytics',
                   cookieTable: {
                     headers: {
@@ -201,6 +210,14 @@ export default function CookieConsentBanner() {
                         expiration:
                           'Diese Website speichert keine Analyse-Cookies.',
                       },
+                      {
+                        name: 'Google Analytics',
+                        domain: 'Google Ireland Limited / Google LLC',
+                        description:
+                          'Misst Seitenaufrufe und Nutzungsmuster nach Einwilligung.',
+                        expiration:
+                          'Kann Analyse-Cookies wie _ga für bis zu 2 Jahre speichern.',
+                      },
                     ],
                   },
                 },
@@ -216,5 +233,10 @@ export default function CookieConsentBanner() {
     });
   }, [locale]);
 
-  return analyticsEnabled ? <Analytics /> : null;
+  return analyticsEnabled ? (
+    <>
+      <Analytics />
+      <GoogleAnalytics />
+    </>
+  ) : null;
 }

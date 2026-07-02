@@ -1,6 +1,6 @@
 import type { MetadataRoute } from 'next';
 
-// const SITE = 'https://www.bbrahma.de';
+// const SITE = '';
 
 // // Indexable pages only (legal pages are noindex, so excluded).
 // // German is the default locale and served unprefixed; English lives under /en.

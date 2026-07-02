@@ -4,8 +4,6 @@ A bilingual product portfolio for Bidangshree Brahma, a Berlin-based Product Own
 
 The site presents professional experience, product skills, training, contact options, and an in-depth LinguaHub case study that documents the full path from user research to a focused MVP prototype.
 
-Live site: www.bbrahma.de⁠￼
-
 ## What This Portfolio Shows
 
 - Product thinking shaped by user needs, UX structure, and technical feasibility
@@ -86,6 +84,7 @@ lib/
   content.ts                  # Experience, education, and skills content
   i18n/                       # Localized dictionary and locale config
 public/
+  certificate/                # Certificate PDFs
   case-studies/linguahub/     # Case study images
 ```
 
@@ -116,13 +115,6 @@ Useful routes:
 - English homepage: [http://localhost:3000/en](http://localhost:3000/en)
 - German LinguaHub case study: [http://localhost:3000/case-studies/linguahub](http://localhost:3000/case-studies/linguahub)
 - English LinguaHub case study: [http://localhost:3000/en/case-studies/linguahub](http://localhost:3000/en/case-studies/linguahub)
-
-Production routes:
-
-- German homepage: https://www.bbrahma.de
-- English homepage: https://www.bbrahma.de/en
-- German LinguaHub case study: https://www.bbrahma.de/case-studies/linguahub
-- English LinguaHub case study: https://www.bbrahma.de/en/case-studies/linguahub
 
 ## Available Scripts
 

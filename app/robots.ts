@@ -1,6 +1,6 @@
 import type { MetadataRoute } from 'next';
 
-// const SITE = 'https://www.bbrahma.de';
+// const SITE = '';
 
 // export default function robots(): MetadataRoute.Robots {
 //   return {

@@ -138,6 +138,13 @@ const en = {
         where:
           'Digitale Leute School, Cologne · Remote\nDiscovery · MVP scoping · Agile delivery · Stakeholder communication · Product metrics',
       },
+      {
+        when: '2026',
+        what: 'Professional Scrum Product Owner I',
+        where: 'Scrum.org',
+        certificateLabel: 'View certificate →',
+        certificateHref: '/certificate/pspo1-certificate.pdf',
+      },
       { when: 'Feb–Jul 2025', what: 'BSK B2 German', where: 'GFBM, Berlin' },
       {
         when: 'Apr–Jul 2026',
@@ -307,6 +314,13 @@ const de: Dict = {
         what: 'Product Management & Product Owner Weiterbildung',
         where:
           'Digitale Leute School, Köln · Remote\nDiscovery · MVP-Scoping · Agile Delivery · Stakeholder-Kommunikation · Produktmetriken',
+      },
+      {
+        when: '2026',
+        what: 'Professional Scrum Product Owner I',
+        where: 'Scrum.org',
+        certificateLabel: 'Zertifikat ansehen →',
+        certificateHref: '/certificate/pspo1-certificate.pdf',
       },
       { when: 'Feb–Jul 2025', what: 'BSK B2 Deutsch', where: 'GFBM, Berlin' },
       {

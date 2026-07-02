@@ -102,14 +102,6 @@ Install dependencies:
 npm install
 ```
 
-Create an environment file and add your Google Analytics measurement ID:
-
-```bash
-NEXT_PUBLIC_GA_MEASUREMENT_ID=G-XXXXXXXXXX
-```
-
-You can find this ID in Google Analytics under Admin -> Data streams -> your Web stream -> Measurement ID. Google Analytics only loads after a visitor accepts the optional analytics category in the cookie banner.
-
 Run the development server:
 
 ```bash

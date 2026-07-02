@@ -67,6 +67,12 @@ export default function Experience() {
               {t.experience.training.map((item) => {
                 const isFeatured = item.what.includes('Product Management');
                 const [provider, details] = item.where.split('\n');
+                const certificateHref =
+                  'certificateHref' in item ? item.certificateHref : undefined;
+                const certificateLabel =
+                  'certificateLabel' in item
+                    ? item.certificateLabel
+                    : undefined;
 
                 return (
                   <div
@@ -86,6 +92,16 @@ export default function Experience() {
                         </>
                       ) : null}
                     </p>
+                    {certificateHref && certificateLabel ? (
+                      <a
+                        href={certificateHref}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={styles.certificateLink}
+                      >
+                        {certificateLabel}
+                      </a>
+                    ) : null}
                   </div>
                 );
               })}

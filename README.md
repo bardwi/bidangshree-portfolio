@@ -23,6 +23,7 @@ The site presents professional experience, product skills, training, contact opt
 - react-icons for interface icons
 - vanilla-cookieconsent for cookie preferences
 - Vercel Analytics
+- Google Analytics 4 via the Google tag (`gtag.js`)
 - Vitest and Testing Library for tests
 - ESLint for code quality
 
@@ -100,6 +101,14 @@ Install dependencies:
 ```bash
 npm install
 ```
+
+Create an environment file and add your Google Analytics measurement ID:
+
+```bash
+NEXT_PUBLIC_GA_MEASUREMENT_ID=G-XXXXXXXXXX
+```
+
+You can find this ID in Google Analytics under Admin -> Data streams -> your Web stream -> Measurement ID. Google Analytics only loads after a visitor accepts the optional analytics category in the cookie banner.
 
 Run the development server:
 

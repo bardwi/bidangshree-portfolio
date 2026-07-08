@@ -7,7 +7,7 @@ const en = {
     items: [
       { label: 'About', href: '/#about' },
       { label: 'Case Study', href: '/#linguahub' },
-      { label: 'Professional Training', href: '/#bootcamp' },
+      { label: 'Professional Training', href: '/#training' },
       { label: 'Experience', href: '/#experience' },
       { label: 'Skills', href: '/#skills' },
     ],
@@ -189,7 +189,7 @@ const de: Dict = {
     items: [
       { label: 'Über mich', href: '/#about' },
       { label: 'Case Study', href: '/#linguahub' },
-      { label: 'Weiterbildung', href: '/#bootcamp' },
+      { label: 'Weiterbildung', href: '/#training' },
       { label: 'Erfahrung', href: '/#experience' },
       { label: 'Skills', href: '/#skills' },
     ],

@@ -7,7 +7,7 @@ export default function Bootcamp() {
   const t = useT();
 
   return (
-    <section id="bootcamp" className="block">
+    <section id="training" className="block">
       <div className="wrap">
         <div className={`${styles.boot} ${styles.rise}`}>
           <div>

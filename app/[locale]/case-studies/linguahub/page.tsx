@@ -18,10 +18,12 @@ function Phone({
   src,
   alt,
   caption,
+  loading = 'lazy',
 }: {
   src: string;
   alt: string;
   caption?: React.ReactNode;
+  loading?: 'eager' | 'lazy';
 }) {
   return (
     <figure className={styles.phone}>
@@ -30,7 +32,7 @@ function Phone({
         alt={alt}
         width={378}
         height={818}
-        loading="lazy"
+        loading={loading}
         sizes="(max-width: 600px) 80vw, (max-width: 980px) 40vw, 286px"
       />
       {caption ? <figcaption>{caption}</figcaption> : null}
@@ -233,8 +235,9 @@ export default function LinguaHubCaseStudyPage() {
             className={`${styles.heroPhones} ${styles.screensRail} ${styles.three} ${styles.reveal}`}
           >
             <Phone
-              src="course-home-v2.png"
+              src="course-home.png"
               alt="LinguaHub learner course home screen"
+              loading="eager"
               caption={
                 <>
                   <b>{ui.phoneCaptions.homeTitle}</b>
@@ -246,6 +249,7 @@ export default function LinguaHubCaseStudyPage() {
             <Phone
               src="course-overview.png"
               alt="LinguaHub course overview screen"
+              loading="eager"
               caption={
                 <>
                   <b>{ui.phoneCaptions.overviewTitle}</b>
@@ -257,6 +261,7 @@ export default function LinguaHubCaseStudyPage() {
             <Phone
               src="lesson-builder.png"
               alt="LinguaHub teacher lesson builder screen"
+              loading="eager"
               caption={
                 <>
                   <b>{ui.phoneCaptions.builderTitle}</b>

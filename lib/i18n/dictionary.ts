@@ -176,7 +176,7 @@ const en = {
   },
 
   footer: {
-    rights: '© 2026 Bidangshree Brahma',
+    rights: '© 2026 Bidangshree Brahma. All rights reserved.',
     imprint: 'Imprint',
     privacy: 'Privacy',
   },
@@ -355,7 +355,7 @@ const de: Dict = {
   },
 
   footer: {
-    rights: '© 2026 Bidangshree Brahma',
+    rights: '© 2026 Bidangshree Brahma. Alle Rechte vorbehalten.',
     imprint: 'Impressum',
     privacy: 'Datenschutz',
   },
